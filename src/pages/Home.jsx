@@ -51,7 +51,7 @@ const Home = () => {
                 "name": "Does Techcure offer a Senior Citizen and Veteran discount?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Techcure provides a flat 60% subsidized grant for entrepreneurs aged 60 and above, retired professionals, and military veterans launching tech ventures."
+                    "text": "Yes. Techcure provides an unconditional flat 60% discount on all custom software engineering for entrepreneurs aged 60 and above, retired professionals, and military veterans."
                 }
             },
             {

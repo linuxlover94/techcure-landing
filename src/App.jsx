@@ -45,6 +45,7 @@ function App() {
               <Route path="/blog" element={<BlogListing />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/senior-grant" element={<SeniorGrant />} />
+              <Route path="/senior-discount" element={<SeniorGrant />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<Home />} />

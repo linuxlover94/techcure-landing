@@ -27,23 +27,23 @@ const Hero = () => {
                     </h1>
 
                     <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-                        We engineer custom, <span className="text-primary font-medium">high-velocity</span> web architectures with sub-second global latency. Zero agency bloat. 100% clean code transferred to you.
+                        We engineer custom, <span className="text-primary font-medium">high-velocity</span> web architectures and full-stack platforms with sub-second global latency. Zero agency bloat. 100% clean code transferred directly to you.
                     </p>
 
-                    {/* Senior & Veteran Founder Grant Callout */}
+                    {/* Senior & Veteran Founder Honorarium Callout */}
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl bg-secondary/80 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-mono mb-8 backdrop-blur-md max-w-2xl mx-auto shadow-lg shadow-amber-500/5 hover:border-amber-500/50 transition-all group">
                         <div className="flex items-center gap-2.5 text-left">
                             <span className="text-xl shrink-0 p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">🎖️</span>
                             <div>
-                                <strong className="text-amber-300 font-bold">Senior Founder Grant (Flat 60% Off):</strong>
-                                <p className="text-[11px] sm:text-xs text-amber-200/80 font-sans mt-0.5">Dedicated digital enablement for entrepreneurs aged 60+ &amp; military veterans.</p>
+                                <strong className="text-amber-300 font-bold">Senior (60+) &amp; Veteran Founder Discount (Flat 60% Off):</strong>
+                                <p className="text-[11px] sm:text-xs text-amber-200/80 font-sans mt-0.5">Dedicated engineering initiative honoring entrepreneurs aged 60+ and military veterans.</p>
                             </div>
                         </div>
                         <a
                             href="/senior-grant"
                             className="shrink-0 px-3.5 py-1.5 rounded-xl bg-amber-400 text-zinc-950 font-bold text-xs hover:bg-amber-300 transition-all flex items-center gap-1 group-hover:translate-x-0.5 shadow-sm"
                         >
-                            <span>Learn &amp; Apply</span>
+                            <span>Explore Initiative</span>
                             <ArrowRight size={12} />
                         </a>
                     </div>

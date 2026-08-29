@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Zap, Code, HeartHandshake, CheckCircle2, XCircle, ArrowRight, Award, Compass } from 'lucide-react';
+import { ShieldCheck, Zap, Code, HeartHandshake, CheckCircle2, XCircle, ArrowRight, Award, Compass, KeyRound, Sparkles } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -12,40 +12,46 @@ import CoreCapabilities from '../components/sections/CoreCapabilities';
 
 const comparisonData = [
     {
-        feature: "Custom React/Next.js Architecture",
+        feature: "Custom React 19 / Edge Architecture",
         techcure: true,
-        agencies: "Often use heavy, slow WordPress templates",
-        freelancers: "Varies; rarely built for high traffic"
+        agencies: "Heavy, bloated WordPress templates (5s+ loads)",
+        freelancers: "Varies wildly; rarely tuned for edge speed"
     },
     {
-        feature: "100% Code & IP Ownership",
+        feature: "100% Unconditional Git & IP Ownership",
         techcure: true,
-        agencies: "Hostage situations & monthly recurring lock-in",
-        freelancers: "Messy repositories with zero documentation"
+        agencies: "Monthly retainers & hostage domain/code lock-in",
+        freelancers: "Undocumented repositories with no handover"
     },
     {
-        feature: "Military-Grade Security (AES-256)",
+        feature: "Cryptographic Security & Zero-Trust Defense",
         techcure: true,
-        agencies: "Generic plugin vulnerabilities",
-        freelancers: "Often ignored completely"
+        agencies: "Vulnerable third-party WordPress plugin stacks",
+        freelancers: "Basic HTTPS; security rarely architected"
     },
     {
-        feature: "72-Hour Rapid Deployment Pipeline",
+        feature: "72-Hour Rapid Launch Pipeline",
         techcure: true,
-        agencies: "Months of bureaucracy and meetings",
-        freelancers: "Unpredictable delays and ghosting"
+        agencies: "Months of account manager discovery meetings",
+        freelancers: "Unpredictable milestones and project ghosting"
     },
     {
-        feature: "Indian Market Cost Efficiency (Save 40%)",
+        feature: "Direct Access to Lead Systems Architects",
         techcure: true,
-        agencies: "Exorbitant overhead costs",
-        freelancers: "Cheap upfront, expensive rework"
+        agencies: "Layers of junior sales reps & account middlemen",
+        freelancers: "Solo developer with single point of failure"
     },
     {
-        feature: "Physical Presence in Lucknow & Ayodhya",
+        feature: "Senior (60+) & Veteran Founder 60% Discount",
         techcure: true,
-        agencies: "Remote ticket queues with no face-to-face",
-        freelancers: "No physical accountability"
+        agencies: "Zero founder subsidies; rigid corporate billing",
+        freelancers: "No institutional discounts or guarantees"
+    },
+    {
+        feature: "Sub-Second Global Core Web Vitals (<0.5s)",
+        techcure: true,
+        agencies: "Struggling with 70/100 Lighthouse performance",
+        freelancers: "Rarely tested on throttled mobile connections"
     }
 ];
 
@@ -53,9 +59,9 @@ const WhyUs = () => {
     const whyUsSchema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Why Choose Techcure - Engineering Superiority",
+        "name": "Why Techcure - The Engineering Standard",
         "url": "https://techcurehq.com/why-us",
-        "description": "Compare Techcure's zero-lock-in digital engineering against traditional marketing agencies and freelance teams. 100% IP ownership, sub-second speed, and 60% Senior Founder Grant.",
+        "description": "Discover why startups, enterprises, and veteran founders choose Techcure over slow traditional agencies and unreliable freelancers.",
         "publisher": {
             "@type": "Organization",
             "name": "Techcure",
@@ -66,13 +72,14 @@ const WhyUs = () => {
     return (
         <div className="pt-28 pb-20">
             <SEOHead
-                title="Why Choose Techcure - Engineering Superiority vs Traditional Agencies"
-                description="Compare Techcure's zero-lock-in digital engineering against traditional marketing agencies and freelance teams. 100% IP ownership, sub-second speed, and 60% Senior Founder Grant."
+                title="Why Techcure - The Engineering Standard vs Agencies"
+                description="Compare Techcure's custom React 19 architecture, 72-hour delivery, 100% IP ownership, and Senior & Veteran discounts against traditional slow agencies."
                 canonicalPath="/why-us"
                 schema={whyUsSchema}
             />
-            {/* Page Header */}
-            <section className="py-16 bg-transparent relative overflow-hidden">
+
+            {/* Hero Section */}
+            <section className="py-16 md:py-20 bg-transparent relative overflow-hidden">
                 <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -81,140 +88,145 @@ const WhyUs = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono mb-6 uppercase tracking-widest">
                             <Compass size={14} className="text-primary" />
-                            Our Engineering Advantage
+                            THE ENGINEERING REALITY
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-head font-bold mb-6 tracking-tight">
-                            WHY{' '}
+                            WHY BUILD WITH{' '}
                             <span className="text-primary block sm:inline">
                                 <ScrambleText text="TECHCURE" />
                             </span>
                         </h1>
 
-                        <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                            We don't build template websites. We engineer high-velocity digital monopolies that outperform competitors on speed, security, and conversion.
+                        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                            Traditional agencies sell bloated templates, hide behind account managers, and lock you into expensive retainers. We engineer high-velocity systems you completely own.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Built for India Section */}
-            <IndiaFirst />
-
-            {/* Comparison Matrix: Techcure vs Others */}
-            <section className="py-20 bg-secondary/30 border-y border-border">
-                <div className="container mx-auto px-6">
+            {/* Transparent Comparison Table */}
+            <section className="container mx-auto px-6 mb-24">
+                <div className="max-w-5xl mx-auto">
                     <SectionHeading
-                        title="THE DIFFERENCE"
-                        subtitle="Side-By-Side Reality Check"
+                        title="THE TRANSPARENCY MATRIX"
+                        subtitle="How Techcure Compares Against The Industry"
                     />
 
-                    <div className="max-w-5xl mx-auto overflow-x-auto">
-                        <div className="rounded-2xl border border-border bg-card/60 backdrop-blur-md overflow-hidden min-w-[650px]">
-                            {/* Table Header */}
-                            <div className="grid grid-cols-12 p-5 bg-secondary/80 border-b border-border text-xs font-mono font-bold uppercase tracking-wider">
-                                <div className="col-span-5 text-foreground">Capabilities &amp; Standards</div>
-                                <div className="col-span-3 text-primary flex items-center gap-1.5">
-                                    <Award size={14} />
-                                    <span>Techcure</span>
-                                </div>
-                                <div className="col-span-2 text-muted-foreground">Typical Agencies</div>
-                                <div className="col-span-2 text-muted-foreground">Freelancers</div>
-                            </div>
-
-                            {/* Table Rows */}
-                            {comparisonData.map((row, idx) => (
-                                <div
-                                    key={idx}
-                                    className={`grid grid-cols-12 p-5 items-center text-xs md:text-sm border-b border-border/50 ${
-                                        idx % 2 === 0 ? 'bg-background/20' : 'bg-secondary/10'
-                                    }`}
-                                >
-                                    <div className="col-span-5 font-medium text-foreground pr-4">
-                                        {row.feature}
-                                    </div>
-                                    <div className="col-span-3 flex items-center gap-2 text-emerald-500 font-bold">
-                                        <CheckCircle2 size={16} className="text-emerald-500 shrink-0" />
-                                        <span>Included &amp; Guaranteed</span>
-                                    </div>
-                                    <div className="col-span-2 text-muted-foreground text-xs pr-2 flex items-center gap-1.5">
-                                        <XCircle size={14} className="text-red-500/70 shrink-0" />
-                                        <span>{row.agencies}</span>
-                                    </div>
-                                    <div className="col-span-2 text-muted-foreground text-xs flex items-center gap-1.5">
-                                        <XCircle size={14} className="text-red-500/70 shrink-0" />
-                                        <span>{row.freelancers}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="overflow-x-auto mt-12">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="border-b border-border/80 text-xs font-mono">
+                                    <th className="py-4 px-6 text-foreground font-bold">CAPABILITY / STANDARD</th>
+                                    <th className="py-4 px-6 text-primary font-bold bg-primary/10 rounded-t-xl text-center">
+                                        TECHCURE
+                                    </th>
+                                    <th className="py-4 px-6 text-muted-foreground text-center">TRADITIONAL AGENCIES</th>
+                                    <th className="py-4 px-6 text-muted-foreground text-center">FREELANCERS</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-border/50 text-xs sm:text-sm">
+                                {comparisonData.map((row, idx) => (
+                                    <tr key={idx} className="hover:bg-secondary/30 transition-colors">
+                                        <td className="py-4 px-6 font-medium text-foreground">
+                                            {row.feature}
+                                        </td>
+                                        <td className="py-4 px-6 text-center bg-primary/5 font-semibold text-primary">
+                                            <div className="flex items-center justify-center gap-1.5 text-emerald-400">
+                                                <CheckCircle2 size={16} />
+                                                <span className="text-xs font-mono">Guaranteed</span>
+                                            </div>
+                                        </td>
+                                        <td className="py-4 px-6 text-center text-muted-foreground font-sans">
+                                            <div className="flex items-center justify-center gap-1.5 text-red-400/80">
+                                                <XCircle size={14} className="shrink-0" />
+                                                <span className="text-xs">{row.agencies}</span>
+                                            </div>
+                                        </td>
+                                        <td className="py-4 px-6 text-center text-muted-foreground font-sans">
+                                            <div className="flex items-center justify-center gap-1.5 text-amber-400/80">
+                                                <XCircle size={14} className="shrink-0" />
+                                                <span className="text-xs">{row.freelancers}</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
 
-            {/* Core Capabilities */}
-            <CoreCapabilities />
-
-            {/* Engineering Pillars */}
-            <section className="py-20 container mx-auto px-6">
-                <SectionHeading
-                    title="FOUR PILLARS"
-                    subtitle="How We Deliver Dominance"
-                />
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <Card className="p-6 bg-card/60 border-border">
-                        <div className="p-3 bg-primary/10 rounded-xl text-primary w-fit mb-4">
-                            <Zap size={24} />
+            {/* Core Pillars Grid */}
+            <section className="container mx-auto px-6 mb-24">
+                <div className="grid md:grid-cols-3 gap-8">
+                    <Card className="p-8 bg-card/70 border-border flex flex-col justify-between">
+                        <div>
+                            <div className="p-3 bg-primary/10 text-primary w-fit rounded-xl mb-6">
+                                <Zap size={24} />
+                            </div>
+                            <h3 className="text-xl font-bold font-head mb-3">Sub-Second Execution</h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                                Every platform is engineered with React 19, zero-runtime Tailwind CSS v4, and Cloudflare/AWS edge compute. Your users experience instant, zero-jank browsing worldwide.
+                            </p>
                         </div>
-                        <h4 className="text-lg font-bold font-head mb-2">Sub-Second Speed</h4>
-                        <p className="text-muted-foreground text-xs leading-relaxed">
-                            Every millisecond counts. We optimize bundling, hydration, and asset delivery to guarantee sub-second First Contentful Paint.
-                        </p>
+                        <div className="text-xs font-mono text-primary flex items-center gap-2 pt-4 border-t border-border">
+                            <CheckCircle2 size={14} />
+                            <span>LCP &lt; 0.6s • INP &lt; 50ms</span>
+                        </div>
                     </Card>
 
-                    <Card className="p-6 bg-card/60 border-border">
-                        <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-400 w-fit mb-4">
-                            <ShieldCheck size={24} />
+                    <Card className="p-8 bg-card/70 border-border flex flex-col justify-between">
+                        <div>
+                            <div className="p-3 bg-emerald-500/10 text-emerald-400 w-fit rounded-xl mb-6">
+                                <KeyRound size={24} />
+                            </div>
+                            <h3 className="text-xl font-bold font-head mb-3">100% Unconditional Ownership</h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                                The full Git repository, server accounts, domain records, and database keys are transferred to you on day one. You never pay ransom retainers.
+                            </p>
                         </div>
-                        <h4 className="text-lg font-bold font-head mb-2">Military-Grade Defense</h4>
-                        <p className="text-muted-foreground text-xs leading-relaxed">
-                            No leaky plugins. We implement strict Content Security Policies, parameterized database queries, and client-side encryption.
-                        </p>
+                        <div className="text-xs font-mono text-emerald-400 flex items-center gap-2 pt-4 border-t border-border">
+                            <CheckCircle2 size={14} />
+                            <span>Zero Vendor Lock-In Ever</span>
+                        </div>
                     </Card>
 
-                    <Card className="p-6 bg-card/60 border-border">
-                        <div className="p-3 bg-blue-500/10 rounded-xl text-blue-400 w-fit mb-4">
-                            <Code size={24} />
+                    <Card className="p-8 bg-card/70 border-border flex flex-col justify-between">
+                        <div>
+                            <div className="p-3 bg-amber-500/10 text-amber-300 w-fit rounded-xl mb-6">
+                                <Award size={24} />
+                            </div>
+                            <h3 className="text-xl font-bold font-head mb-3">Ethical Senior &amp; Veteran Support</h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                                We celebrate real domain wisdom with an unconditional flat 60% discount for entrepreneurs aged 60+ and military veterans launching digital ventures.
+                            </p>
                         </div>
-                        <h4 className="text-lg font-bold font-head mb-2">Clean Architecture</h4>
-                        <p className="text-muted-foreground text-xs leading-relaxed">
-                            Modular, maintainable codebases that your internal developers or future hires will love to work with and extend.
-                        </p>
-                    </Card>
-
-                    <Card className="p-6 bg-card/60 border-border">
-                        <div className="p-3 bg-purple-500/10 rounded-xl text-purple-400 w-fit mb-4">
-                            <HeartHandshake size={24} />
+                        <div className="text-xs font-mono text-amber-300 flex items-center gap-2 pt-4 border-t border-border">
+                            <CheckCircle2 size={14} />
+                            <span>Flat 60% Subsidized Engineering</span>
                         </div>
-                        <h4 className="text-lg font-bold font-head mb-2">Direct Founder Access</h4>
-                        <p className="text-muted-foreground text-xs leading-relaxed">
-                            No bureaucratic account managers. You work directly with senior software architects in Lucknow, Ayodhya, and Bangalore.
-                        </p>
                     </Card>
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="container mx-auto px-6 text-center">
-                <div className="p-12 rounded-3xl bg-card/80 border border-border">
-                    <h2 className="text-3xl md:text-4xl font-head font-bold mb-4">Ready to upgrade from slow templates?</h2>
-                    <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-                        Let's schedule a roadmap discussion and engineer your custom high-velocity digital platform.
+            <IndiaFirst />
+            <CoreCapabilities />
+
+            {/* Bottom Call to Action */}
+            <section className="container mx-auto px-6 text-center mt-20">
+                <div className="p-12 rounded-3xl bg-card/80 border border-border max-w-4xl mx-auto shadow-2xl">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-mono mb-4 uppercase">
+                        <Sparkles size={12} />
+                        DIRECT ARCHITECT ACCESS
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-head font-bold mb-4">Experience the Techcure engineering standard</h2>
+                    <p className="text-sm text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed">
+                        Talk directly to our lead architects. We will audit your current tech stack or scope your new platform in 72 hours.
                     </p>
                     <Link to="/contact">
                         <Button size="lg" className="rounded-full px-8 gap-2">
-                            <span>Get Started With Techcure</span>
+                            <span>Start Your Project</span>
                             <ArrowRight size={16} />
                         </Button>
                     </Link>

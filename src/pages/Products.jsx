@@ -30,7 +30,7 @@ const Products = () => {
             "url": product.url || `https://techcurehq.com/case-study/${product.id}`,
             "applicationCategory": product.category,
             "operatingSystem": "Web, Cloud, Cross-Platform",
-            "description": product.tagline,
+            "description": product.description,
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -48,7 +48,7 @@ const Products = () => {
         <div className="pt-28 pb-20">
             <SEOHead
                 title="Proprietary Software Systems & SaaS Products"
-                description="Explore battle-tested proprietary software engineered by Techcure, including InkLeaf zero-knowledge vault, RentFlow PropTech OS, and MathSheet edge engine."
+                description="Explore battle-tested proprietary software engineered by Techcure, including InkLeaf zero-knowledge vault, RentFlow PropTech platform, and MathSheet algorithmic math engine."
                 canonicalPath="/products"
                 schema={productsSchema}
             />
@@ -62,7 +62,7 @@ const Products = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono mb-6 uppercase tracking-widest">
                             <Flame size={14} className="text-primary animate-pulse" />
-                            Proprietary Systems &amp; Software
+                            Proprietary Software Systems
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-head font-bold mb-6 tracking-tight">
@@ -73,7 +73,7 @@ const Products = () => {
                         </h1>
 
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                            Battle-tested software systems designed and deployed by Techcure. Built with zero-compromise client-side cryptography, infinite edge scale, and automated operational pipelines.
+                            Software systems engineered from first principles by Techcure. Built for uncompromising client-side cryptography, sub-millisecond edge computation, and zero-touch operational automation.
                         </p>
                     </motion.div>
                 </div>
@@ -125,19 +125,19 @@ const Products = () => {
                                 <div className="p-4 rounded-xl bg-emerald-500/10 text-emerald-400 w-fit mb-6 border border-emerald-500/20">
                                     <Lock size={28} />
                                 </div>
-                                <h3 className="text-xl font-bold font-head mb-3">Zero-Knowledge Sandboxes</h3>
+                                <h3 className="text-xl font-bold font-head mb-3">Zero-Knowledge Cryptography</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                                    Like our military-grade notebook <span className="text-foreground font-semibold">InkLeaf</span>, encryption keys are derived client-side. The server never sees your plain-text data.
+                                    In applications like <span className="text-foreground font-semibold">InkLeaf</span>, cryptographic keys are derived entirely in WebAssembly memory using Argon2id. Your plaintext data is encrypted client-side and never touches our servers unencrypted.
                                 </p>
                             </div>
                             <ul className="space-y-2.5 text-xs text-muted-foreground border-t border-border/80 pt-4">
                                 <li className="flex items-center gap-2">
                                     <Check size={14} className="text-emerald-400" />
-                                    <span>PBKDF2 SHA-256 + AES-256-GCM</span>
+                                    <span>Non-extractable WebCrypto AES-256-GCM keys</span>
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <Check size={14} className="text-emerald-400" />
-                                    <span>IndexedDB local-first persistence</span>
+                                    <span>Local-first IndexedDB persistence with 0ms typing lag</span>
                                 </li>
                             </ul>
                         </Card>
@@ -149,17 +149,17 @@ const Products = () => {
                                 </div>
                                 <h3 className="text-xl font-bold font-head mb-3">Zero-Touch Automation</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                                    Powering operational platforms like <span className="text-foreground font-semibold">RentFlow</span> with WhatsApp Cloud APIs, auto-reconciliation, and zero-touch invoicing.
+                                    Platforms like <span className="text-foreground font-semibold">RentFlow</span> replace manual spreadsheets and phone calls with automated UPI AutoPay reconciliation, direct WhatsApp invoice dispatch, and instant digital KYC.
                                 </p>
                             </div>
                             <ul className="space-y-2.5 text-xs text-muted-foreground border-t border-border/80 pt-4">
                                 <li className="flex items-center gap-2">
                                     <Check size={14} className="text-cyan-400" />
-                                    <span>UPI AutoPay &amp; Instant Webhooks</span>
+                                    <span>Automated UPI AutoPay &amp; instant webhook reconciliation</span>
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <Check size={14} className="text-cyan-400" />
-                                    <span>Sub-second ledger synchronization</span>
+                                    <span>Sub-second ledger synchronization &amp; PDF generation</span>
                                 </li>
                             </ul>
                         </Card>
@@ -169,19 +169,19 @@ const Products = () => {
                                 <div className="p-4 rounded-xl bg-purple-500/10 text-purple-400 w-fit mb-6 border border-purple-500/20">
                                     <Terminal size={28} />
                                 </div>
-                                <h3 className="text-xl font-bold font-head mb-3">Algorithmic Edge Speed</h3>
+                                <h3 className="text-xl font-bold font-head mb-3">Sub-Millisecond Algorithmic Speed</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                                    Like <span className="text-foreground font-semibold">MathSheet</span>, running mathematical engines directly on Cloudflare Edge for instantaneous client response.
+                                    Engines like <span className="text-foreground font-semibold">MathSheet</span> execute procedural generation algorithms directly on the client and Cloudflare Edge nodes, synthesizing complex mathematical problem sets in under 25ms.
                                 </p>
                             </div>
                             <ul className="space-y-2.5 text-xs text-muted-foreground border-t border-border/80 pt-4">
                                 <li className="flex items-center gap-2">
                                     <Check size={14} className="text-purple-400" />
-                                    <span>&lt; 50ms cold execution time</span>
+                                    <span>&lt; 25ms algorithmic synthesis execution</span>
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <Check size={14} className="text-purple-400" />
-                                    <span>100% offline edge cacheability</span>
+                                    <span>100% offline &amp; edge-cached availability</span>
                                 </li>
                             </ul>
                         </Card>
@@ -195,11 +195,11 @@ const Products = () => {
                     <div className="max-w-2xl mx-auto relative z-10">
                         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono mb-4 uppercase">
                             <Sparkles size={12} />
-                            Bespoke SaaS Development
+                            Bespoke Software Engineering
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-head font-bold mb-4">Need a custom product engineered for your enterprise?</h2>
+                        <h2 className="text-3xl md:text-4xl font-head font-bold mb-4">Need a custom product engineered for your organization?</h2>
                         <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
-                            We architect, build, and deploy complete custom SaaS platforms, proprietary mobile applications, and high-throughput commerce networks.
+                            We architect, build, and deploy custom software products—from client-side encrypted vaults to high-throughput commerce networks and computational engines.
                         </p>
                         <Link to="/contact">
                             <Button size="lg" className="rounded-full px-8 gap-2 shadow-lg">

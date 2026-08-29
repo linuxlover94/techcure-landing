@@ -5,20 +5,28 @@ import SectionHeading from '../ui/SectionHeading';
 
 const faqs = [
     {
-        question: "How fast can you launch?",
-        answer: "For standard business sites, we deploy in 72 hours. Custom web apps typically take 2-3 weeks depending on complexity."
+        question: "How fast can you engineer and launch our system?",
+        answer: "For high-velocity marketing architectures and business platforms, we build and deploy in 72 hours. Custom full-stack web applications, SaaS platforms, and dynamic portals typically take 2–3 weeks depending on technical specifications and third-party integrations."
     },
     {
-        question: "Do I own the code?",
-        answer: "100%. Once the final payment is cleared, you own the IP, the code, and the domain. No hostage situations."
+        question: "Do we own the full source code and intellectual property?",
+        answer: "100% unconditionally. Upon delivery, the complete Git repository, codebase, cloud infrastructure accounts, and domain credentials are fully transferred to you. We maintain zero proprietary lock-in and zero hostage mechanisms."
     },
     {
-        question: "Can we meet in Lucknow?",
-        answer: "Yes. We have a physical presence in Lucknow and Ayodhya. We can arrange a meeting to discuss your roadmap."
+        question: "How does the Senior (60+) & Veteran Founder Discount work?",
+        answer: "We offer a flat 60% discount across all software engineering and platform builds for founders aged 60 and above, retired professionals starting new ventures, and military veterans. No bureaucratic red tape—simply select the Senior & Veteran track when reaching out to apply the discount."
     },
     {
-        question: "What tech stack do you use?",
-        answer: "We primarily use React, Next.js, and Node.js for web apps. For mobile, we use Flutter or React Native. We avoid WordPress templates."
+        question: "What modern technology stack and infrastructure do you build on?",
+        answer: "We engineer with modern, production-grade stacks: Next.js, React 19, TypeScript, Node.js, PostgreSQL, Supabase, Tailwind CSS, and global edge computing networks (Cloudflare/Vercel/AWS). We deliberately avoid slow, bloated legacy CMS systems like WordPress."
+    },
+    {
+        question: "What ongoing maintenance and engineering support do you provide?",
+        answer: "Every project includes dedicated post-launch hypercare (ranging from 30 to 180 days depending on tier). This covers live uptime monitoring, performance optimization, security patches, and direct 1-on-1 technical onboarding for your team."
+    },
+    {
+        question: "Can we meet your engineering team in person?",
+        answer: "Yes. We maintain physical hubs across Lucknow, Ayodhya, and Bengaluru for founders who prefer in-person architectural discovery sessions, while running seamless asynchronous delivery globally."
     }
 ];
 
@@ -63,7 +71,7 @@ const FAQ = () => {
                                         transition={{ duration: 0.3 }}
                                         className="overflow-hidden"
                                     >
-                                        <div className="p-6 pt-0 text-muted-foreground border-t border-border/50">
+                                        <div className="p-6 pt-0 text-muted-foreground border-t border-border/50 leading-relaxed">
                                             {faq.answer}
                                         </div>
                                     </motion.div>

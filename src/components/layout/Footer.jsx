@@ -39,7 +39,7 @@ const Footer = () => {
                             <li><Link to="/products" className="hover:text-primary transition-colors">Products &amp; Tools</Link></li>
                             <li><Link to="/portfolio" className="hover:text-primary transition-colors">Client Portfolio</Link></li>
                             <li><Link to="/free-apps" className="hover:text-primary transition-colors">Free Web Apps</Link></li>
-                            <li><Link to="/senior-grant" className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">Senior Founder Grant 🎖️</Link></li>
+                            <li><Link to="/senior-grant" className="hover:text-amber-400 transition-colors text-amber-300 font-semibold">Senior &amp; Veteran (-60%) 🎖️</Link></li>
                             <li><Link to="/blog" className="hover:text-primary transition-colors">Engineering Blog</Link></li>
                             <li><Link to="/why-us" className="hover:text-primary transition-colors">Why Techcure</Link></li>
                             <li><Link to="/about" className="hover:text-primary transition-colors">About &amp; Team</Link></li>
