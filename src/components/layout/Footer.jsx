@@ -43,6 +43,7 @@ const Footer = () => {
                             <li><Link to="/why-us" className="hover:text-primary transition-colors">Why Techcure</Link></li>
                             <li><Link to="/about" className="hover:text-primary transition-colors">About &amp; Team</Link></li>
                             <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Engineering</Link></li>
+                            <li><Link to="/admin" className="hover:text-primary transition-colors opacity-60 hover:opacity-100 font-mono text-xs">Admin Console 🔒</Link></li>
                         </ul>
                     </div>
 

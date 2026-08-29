@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Search, Sparkles, Rss, ArrowRight } from 'lucide-react';
 import SEOHead from '../components/ui/SEOHead';
 import SectionHeading from '../components/ui/SectionHeading';
 import ScrambleText from '../components/ui/ScrambleText';
 import BlogCard from '../components/blog/BlogCard';
-import { BLOG_POSTS, BLOG_CATEGORIES } from '../data/blogData';
+import { BLOG_CATEGORIES } from '../data/blogData';
+import { getStoredPosts } from '../utils/blogStorage';
 
 const BlogListing = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
+    const [posts, setPosts] = useState(() => getStoredPosts());
 
-    const filteredPosts = BLOG_POSTS.filter((post) => {
+    useEffect(() => {
+        const handleUpdate = () => setPosts(getStoredPosts());
+        window.addEventListener('techcure_blog_updated', handleUpdate);
+        return () => window.removeEventListener('techcure_blog_updated', handleUpdate);
+    }, []);
+
+    const filteredPosts = posts.filter((post) => {
         const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
         const matchesSearch =
             post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -20,8 +28,8 @@ const BlogListing = () => {
         return matchesCategory && matchesSearch;
     });
 
-    const featuredPost = BLOG_POSTS.find((p) => p.featured) || BLOG_POSTS[0];
-    const regularPosts = filteredPosts.filter((p) => p.id !== (selectedCategory === 'All' && !searchQuery ? featuredPost.id : null));
+    const featuredPost = posts.find((p) => p.featured) || posts[0];
+    const regularPosts = filteredPosts.filter((p) => p.id !== (selectedCategory === 'All' && !searchQuery ? featuredPost?.id : null));
 
     const blogSchema = {
         "@context": "https://schema.org",
@@ -29,7 +37,7 @@ const BlogListing = () => {
         "name": "Techcure Engineering Blog & Architectural Teardowns",
         "url": "https://techcurehq.com/blog",
         "description": "In-depth engineering articles on React 19, zero-knowledge WebCrypto, sub-second edge performance, and modern SaaS architecture.",
-        "hasPart": BLOG_POSTS.map((post) => ({
+        "hasPart": posts.map((post) => ({
             "@type": "BlogPosting",
             "headline": post.title,
             "description": post.description,

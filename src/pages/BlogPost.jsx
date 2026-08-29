@@ -21,15 +21,17 @@ import AuthorCard from '../components/blog/AuthorCard';
 import SocialShare from '../components/blog/SocialShare';
 import ReadingProgress from '../components/blog/ReadingProgress';
 import BlogCard from '../components/blog/BlogCard';
-import { BLOG_POSTS } from '../data/blogData';
+import { getStoredPosts } from '../utils/blogStorage';
 
 const BlogPost = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
 
+    const allPosts = useMemo(() => getStoredPosts(), []);
+
     const post = useMemo(() => {
-        return BLOG_POSTS.find((p) => p.slug === slug || p.id === slug);
-    }, [slug]);
+        return allPosts.find((p) => p.slug === slug || p.id === slug);
+    }, [allPosts, slug]);
 
     if (!post) {
         return (
@@ -82,7 +84,7 @@ const BlogPost = () => {
         "keywords": post.tags.join(', ')
     };
 
-    const relatedPosts = BLOG_POSTS.filter((p) => p.id !== post.id).slice(0, 2);
+    const relatedPosts = allPosts.filter((p) => p.id !== post.id).slice(0, 2);
 
     // Custom Markdown Component Renderers
     const markdownComponents = {
