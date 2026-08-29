@@ -331,9 +331,14 @@ const ProjectPreviewCard = ({ project, layout = "grid" }) => {
                         <div className="flex-1 overflow-hidden relative">
                             <img
                                 ref={imgRef}
-                                src={project.previewImage}
+                                src={project.previewImage || project.image}
                                 alt={`${project.title} full page capture`}
                                 onLoad={updateMetrics}
+                                onError={(e) => {
+                                    if (project.svgPreview) {
+                                        e.currentTarget.src = project.svgPreview;
+                                    }
+                                }}
                                 className="w-full h-auto object-top block will-change-transform transition-none"
                                 style={{ transform: 'translate3d(0, 0px, 0)' }}
                             />
