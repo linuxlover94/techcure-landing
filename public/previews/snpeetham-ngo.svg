@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="grad-ea580c" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="glow-ea580c" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .font-sans { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="#090d16"/>
+  <rect width="1200" height="600" fill="url(#glow-ea580c)"/>
+
+  <!-- Top Navbar -->
+  <rect width="1200" height="70" fill="#0d1322" opacity="0.95"/>
+  <line x1="0" y1="70" x2="1200" y2="70" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="50" cy="35" r="14" fill="#ea580c"/>
+  <text x="75" y="42" fill="#ffffff" font-size="20" font-weight="bold" class="font-sans">Shri Niwas Peetham</text>
+  <rect x="750" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="840" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="930" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="1030" y="18" width="120" height="34" rx="17" fill="#ea580c"/>
+  <text x="1090" y="40" fill="#000000" font-size="13" font-weight="bold" text-anchor="middle" class="font-sans">LAUNCH APP</text>
+
+  <!-- Custom Page Body Content -->
+  
+  <!-- Hero Section -->
+  <g transform="translate(60, 110)">
+    <rect width="250" height="30" rx="15" fill="#ea580c" fill-opacity="0.2" stroke="#ea580c" stroke-opacity="0.5"/>
+    <text x="125" y="20" fill="#fb923c" font-size="12" font-weight="bold" text-anchor="middle" class="font-mono">🚩 SEWA SANSTHAN AYODHYA</text>
+    <text x="0" y="90" fill="#ffffff" font-size="44" font-weight="bold" class="font-sans">Public Welfare, Ann Mahaprasad</text>
+    <text x="0" y="140" fill="#fb923c" font-size="44" font-weight="bold" class="font-sans">&amp; Vedic Heritage Sansthan</text>
+    <text x="0" y="185" fill="#94a3b8" font-size="16" class="font-sans">Serving 100,000+ devotees, organizing free medical surgeries, and preserving Ayodhya culture.</text>
+  </g>
+
+  <!-- NGO Milestones & Donation Portal -->
+  <g transform="translate(60, 330)">
+    <rect width="1080" height="540" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="2"/>
+    
+    <g transform="translate(40, 35)">
+      <rect width="220" height="110" rx="8" fill="#131b2e" stroke="#ea580c" stroke-opacity="0.3"/>
+      <text x="20" y="40" fill="#fb923c" font-size="28" font-weight="bold">100,000+</text>
+      <text x="20" y="70" fill="#ffffff" font-size="14" font-weight="bold">Meals Served</text>
+      <text x="20" y="90" fill="#94a3b8" font-size="11">Daily Ann Mahaprasad</text>
+    </g>
+    <g transform="translate(290, 35)">
+      <rect width="220" height="110" rx="8" fill="#131b2e" stroke="#ea580c" stroke-opacity="0.3"/>
+      <text x="20" y="40" fill="#fb923c" font-size="28" font-weight="bold">5,000+</text>
+      <text x="20" y="70" fill="#ffffff" font-size="14" font-weight="bold">Free Operations</text>
+      <text x="20" y="90" fill="#94a3b8" font-size="11">Polio &amp; Eye Surgeries</text>
+    </g>
+    <g transform="translate(540, 35)">
+      <rect width="220" height="110" rx="8" fill="#131b2e" stroke="#ea580c" stroke-opacity="0.3"/>
+      <text x="20" y="40" fill="#fb923c" font-size="28" font-weight="bold">2005</text>
+      <text x="20" y="70" fill="#ffffff" font-size="14" font-weight="bold">Established</text>
+      <text x="20" y="90" fill="#94a3b8" font-size="11">20+ Yrs of Public Trust</text>
+    </g>
+    <g transform="translate(790, 35)">
+      <rect width="250" height="110" rx="8" fill="#131b2e" stroke="#ea580c" stroke-opacity="0.3"/>
+      <text x="20" y="40" fill="#10b981" font-size="28" font-weight="bold">80G Tax-Free</text>
+      <text x="20" y="70" fill="#ffffff" font-size="14" font-weight="bold">Instant Receipts</text>
+      <text x="20" y="90" fill="#10b981" font-size="11">Automated PDF Dispatch</text>
+    </g>
+
+    <g transform="translate(40, 180)">
+      <rect width="1000" height="310" rx="10" fill="#131826" stroke="#1e293b"/>
+      <text x="30" y="45" fill="#ffffff" font-size="20" font-weight="bold">Online Devotee Contribution Gateway</text>
+      
+      <rect x="30" y="75" width="160" height="50" rx="6" fill="#ea580c"/>
+      <text x="110" y="105" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">₹1,100</text>
+      
+      <rect x="210" y="75" width="160" height="50" rx="6" fill="#1e293b" stroke="#334155"/>
+      <text x="290" y="105" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">₹5,100</text>
+
+      <rect x="390" y="75" width="160" height="50" rx="6" fill="#1e293b" stroke="#334155"/>
+      <text x="470" y="105" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">₹11,000</text>
+
+      <rect x="30" y="160" width="450" height="50" rx="6" fill="#0f172a" stroke="#334155"/>
+      <text x="50" y="190" fill="#94a3b8" font-size="14">Enter custom Sewa amount (₹)</text>
+
+      <rect x="30" y="230" width="450" height="50" rx="8" fill="#ea580c"/>
+      <text x="255" y="262" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">CONTRIBUTE FOR ANN MAHAPRASAD</text>
+    </g>
+  </g>
+
+
+  <!-- Footer Section -->
+  <rect y="1450" width="1200" height="150" fill="#060911"/>
+  <line x1="0" y1="1450" x2="1200" y2="1450" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="60" cy="1510" r="12" fill="#ea580c"/>
+  <text x="85" y="1516" fill="#ffffff" font-size="18" font-weight="bold" class="font-sans">Shri Niwas Peetham</text>
+  <text x="85" y="1540" fill="#94a3b8" font-size="13" class="font-sans">Engineered with high performance and zero telemetry • Verified Platform</text>
+  <text x="1100" y="1525" fill="#64748b" font-size="13" text-anchor="end" class="font-mono">© 2026 Production Build</text>
+</svg>

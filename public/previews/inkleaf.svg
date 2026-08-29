@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="grad-10b981" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="glow-10b981" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .font-sans { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="#090d16"/>
+  <rect width="1200" height="600" fill="url(#glow-10b981)"/>
+
+  <!-- Top Navbar -->
+  <rect width="1200" height="70" fill="#0d1322" opacity="0.95"/>
+  <line x1="0" y1="70" x2="1200" y2="70" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="50" cy="35" r="14" fill="#10b981"/>
+  <text x="75" y="42" fill="#ffffff" font-size="20" font-weight="bold" class="font-sans">InkLeaf</text>
+  <rect x="750" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="840" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="930" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="1030" y="18" width="120" height="34" rx="17" fill="#10b981"/>
+  <text x="1090" y="40" fill="#000000" font-size="13" font-weight="bold" text-anchor="middle" class="font-sans">LAUNCH APP</text>
+
+  <!-- Custom Page Body Content -->
+  
+  <!-- Hero Section -->
+  <g transform="translate(60, 110)">
+    <rect width="260" height="30" rx="15" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4"/>
+    <text x="130" y="20" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle" class="font-mono">🔒 AES-256-GCM ZERO-KNOWLEDGE</text>
+    <text x="0" y="90" fill="#ffffff" font-size="44" font-weight="bold" class="font-sans">Client-Side Encrypted</text>
+    <text x="0" y="140" fill="#10b981" font-size="44" font-weight="bold" class="font-sans">Markdown &amp; Math Vault</text>
+    <text x="0" y="185" fill="#94a3b8" font-size="16" class="font-sans">100% Offline-First. KaTeX formulas, Mermaid diagrams, and private note vaults.</text>
+  </g>
+
+  <!-- Editor Mock Window -->
+  <g transform="translate(60, 340)">
+    <rect width="1080" height="520" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="2"/>
+    <!-- Sidebar -->
+    <rect width="240" height="520" rx="12" fill="#0f172a"/>
+    <line x1="240" y1="0" x2="240" y2="520" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="40" fill="#64748b" font-size="12" font-weight="bold" class="font-mono">ENCRYPTED VAULT</text>
+    <rect x="15" y="60" width="210" height="36" rx="6" fill="#10b981" fill-opacity="0.2"/>
+    <text x="35" y="83" fill="#34d399" font-size="13" class="font-sans">📄 Quantum_Notes.md</text>
+    <text x="35" y="125" fill="#94a3b8" font-size="13" class="font-sans">📄 Neural_Network_Math.md</text>
+    <text x="35" y="165" fill="#94a3b8" font-size="13" class="font-sans">📄 Architecture_Specs.md</text>
+
+    <!-- Editor Pane -->
+    <rect x="240" y="0" width="420" height="520" fill="#0b1120"/>
+    <text x="260" y="40" fill="#64748b" font-size="12" class="font-mono">MARKDOWN SOURCE</text>
+    <text x="260" y="80" fill="#f87171" font-size="14" class="font-mono"># Quantum Cryptography</text>
+    <text x="260" y="115" fill="#e2e8f0" font-size="13" class="font-mono">State vector formulation:</text>
+    <text x="260" y="145" fill="#38bdf8" font-size="13" class="font-mono">$$ |psiangle = alpha |0angle + eta |1angle $$</text>
+    <text x="260" y="185" fill="#fbbf24" font-size="13" class="font-mono">```mermaid</text>
+    <text x="260" y="210" fill="#94a3b8" font-size="13" class="font-mono">graph TD; Alice--&gt;Bob;</text>
+    <text x="260" y="235" fill="#fbbf24" font-size="13" class="font-mono">```</text>
+
+    <!-- Preview Pane -->
+    <rect x="660" y="0" width="420" height="520" fill="#070b14"/>
+    <line x1="660" y1="0" x2="660" y2="520" stroke="#1e293b" stroke-width="1"/>
+    <text x="680" y="40" fill="#64748b" font-size="12" class="font-mono">LIVE COMPILED RENDER</text>
+    <text x="680" y="80" fill="#ffffff" font-size="20" font-weight="bold" class="font-sans">Quantum Cryptography</text>
+    <text x="680" y="115" fill="#94a3b8" font-size="14" class="font-sans">State vector formulation:</text>
+    <rect x="680" y="130" width="380" height="46" rx="8" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-opacity="0.3"/>
+    <text x="870" y="158" fill="#34d399" font-size="16" font-weight="bold" text-anchor="middle" class="font-mono">|ψ⟩ = α|0⟩ + β|1⟩</text>
+    
+    <!-- Mermaid Flowchart Box -->
+    <rect x="680" y="200" width="380" height="150" rx="8" fill="#0f172a" stroke="#334155"/>
+    <circle cx="750" cy="275" r="30" fill="#10b981" fill-opacity="0.2" stroke="#10b981"/>
+    <text x="750" y="280" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle" class="font-sans">Alice</text>
+    <line x1="785" y1="275" x2="945" y2="275" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4"/>
+    <circle cx="980" cy="275" r="30" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8"/>
+    <text x="980" y="280" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle" class="font-sans">Bob</text>
+  </g>
+
+  <!-- Feature Grid Lower Section -->
+  <g transform="translate(60, 900)">
+    <text x="0" y="30" fill="#ffffff" font-size="28" font-weight="bold" class="font-sans">Security Specs &amp; Architecture</text>
+    <g transform="translate(0, 60)">
+      <rect width="340" height="180" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <circle cx="40" cy="40" r="18" fill="#10b981" fill-opacity="0.2"/>
+      <text x="40" y="45" fill="#10b981" font-size="14" text-anchor="middle">🔑</text>
+      <text x="70" y="45" fill="#ffffff" font-size="16" font-weight="bold" class="font-sans">PBKDF2 + AES-GCM</text>
+      <text x="25" y="85" fill="#94a3b8" font-size="13" class="font-sans">Keys derived client-side with 100,000 SHA-256 iterations. No plain text stored.</text>
+    </g>
+    <g transform="translate(370, 60)">
+      <rect width="340" height="180" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <circle cx="40" cy="40" r="18" fill="#38bdf8" fill-opacity="0.2"/>
+      <text x="40" y="45" fill="#38bdf8" font-size="14" text-anchor="middle">⚡</text>
+      <text x="70" y="45" fill="#ffffff" font-size="16" font-weight="bold" class="font-sans">IndexedDB Engine</text>
+      <text x="25" y="85" fill="#94a3b8" font-size="13" class="font-sans">Instant offline synchronization directly inside browser memory sandbox.</text>
+    </g>
+    <g transform="translate(740, 60)">
+      <rect width="340" height="180" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <circle cx="40" cy="40" r="18" fill="#a855f7" fill-opacity="0.2"/>
+      <text x="40" y="45" fill="#a855f7" font-size="14" text-anchor="middle">📊</text>
+      <text x="70" y="45" fill="#ffffff" font-size="16" font-weight="bold" class="font-sans">KaTeX &amp; Mermaid</text>
+      <text x="25" y="85" fill="#94a3b8" font-size="13" class="font-sans">Full scientific computing diagram and formula renderer with zero server delay.</text>
+    </g>
+  </g>
+
+
+  <!-- Footer Section -->
+  <rect y="1450" width="1200" height="150" fill="#060911"/>
+  <line x1="0" y1="1450" x2="1200" y2="1450" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="60" cy="1510" r="12" fill="#10b981"/>
+  <text x="85" y="1516" fill="#ffffff" font-size="18" font-weight="bold" class="font-sans">InkLeaf</text>
+  <text x="85" y="1540" fill="#94a3b8" font-size="13" class="font-sans">Engineered with high performance and zero telemetry • Verified Platform</text>
+  <text x="1100" y="1525" fill="#64748b" font-size="13" text-anchor="end" class="font-mono">© 2026 Production Build</text>
+</svg>

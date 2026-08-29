@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="grad-00f0ff" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="glow-00f0ff" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .font-sans { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="#090d16"/>
+  <rect width="1200" height="600" fill="url(#glow-00f0ff)"/>
+
+  <!-- Top Navbar -->
+  <rect width="1200" height="70" fill="#0d1322" opacity="0.95"/>
+  <line x1="0" y1="70" x2="1200" y2="70" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="50" cy="35" r="14" fill="#00f0ff"/>
+  <text x="75" y="42" fill="#ffffff" font-size="20" font-weight="bold" class="font-sans">RentFlow</text>
+  <rect x="750" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="840" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="930" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="1030" y="18" width="120" height="34" rx="17" fill="#00f0ff"/>
+  <text x="1090" y="40" fill="#000000" font-size="13" font-weight="bold" text-anchor="middle" class="font-sans">LAUNCH APP</text>
+
+  <!-- Custom Page Body Content -->
+  
+  <!-- Hero Section -->
+  <g transform="translate(60, 110)">
+    <rect width="240" height="30" rx="15" fill="#00f0ff" fill-opacity="0.15" stroke="#00f0ff" stroke-opacity="0.4"/>
+    <text x="120" y="20" fill="#00f0ff" font-size="12" font-weight="bold" text-anchor="middle" class="font-mono">🏢 ALL-IN-ONE PROPTECH</text>
+    <text x="0" y="90" fill="#ffffff" font-size="44" font-weight="bold" class="font-sans">Next-Gen Property &amp;</text>
+    <text x="0" y="140" fill="#00f0ff" font-size="44" font-weight="bold" class="font-sans">Tenant Rental OS</text>
+    <text x="0" y="185" fill="#94a3b8" font-size="16" class="font-sans">Automated UPI rent collection, WhatsApp receipts, digital lease agreements &amp; analytics.</text>
+  </g>
+
+  <!-- Dashboard Preview -->
+  <g transform="translate(60, 330)">
+    <rect width="1080" height="540" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="2"/>
+    
+    <!-- Top Stat Cards -->
+    <g transform="translate(30, 30)">
+      <rect width="230" height="100" rx="8" fill="#131c2e" stroke="#1e293b"/>
+      <text x="20" y="35" fill="#94a3b8" font-size="13" class="font-sans">TOTAL MONTHLY RENT</text>
+      <text x="20" y="70" fill="#ffffff" font-size="26" font-weight="bold" class="font-sans">₹14,85,000</text>
+      <text x="20" y="90" fill="#10b981" font-size="11" class="font-sans">↑ 98.4% Collected</text>
+    </g>
+    <g transform="translate(285, 30)">
+      <rect width="230" height="100" rx="8" fill="#131c2e" stroke="#1e293b"/>
+      <text x="20" y="35" fill="#94a3b8" font-size="13" class="font-sans">ACTIVE PROPERTIES</text>
+      <text x="20" y="70" fill="#00f0ff" font-size="26" font-weight="bold" class="font-sans">42 Units</text>
+      <text x="20" y="90" fill="#94a3b8" font-size="11" class="font-sans">100% Occupancy</text>
+    </g>
+    <g transform="translate(540, 30)">
+      <rect width="230" height="100" rx="8" fill="#131c2e" stroke="#1e293b"/>
+      <text x="20" y="35" fill="#94a3b8" font-size="13" class="font-sans">WHATSAPP REMINDERS</text>
+      <text x="20" y="70" fill="#10b981" font-size="26" font-weight="bold" class="font-sans">Automated</text>
+      <text x="20" y="90" fill="#10b981" font-size="11" class="font-sans">✓ Sent via Cloud API</text>
+    </g>
+    <g transform="translate(795, 30)">
+      <rect width="250" height="100" rx="8" fill="#131c2e" stroke="#1e293b"/>
+      <text x="20" y="35" fill="#94a3b8" font-size="13" class="font-sans">MAINTENANCE TICKETS</text>
+      <text x="20" y="70" fill="#fbbf24" font-size="26" font-weight="bold" class="font-sans">2 Pending</text>
+      <text x="20" y="90" fill="#94a3b8" font-size="11" class="font-sans">Avg resolution: 4.2h</text>
+    </g>
+
+    <!-- Table of Tenants -->
+    <g transform="translate(30, 160)">
+      <rect width="1020" height="340" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="25" y="35" fill="#ffffff" font-size="16" font-weight="bold" class="font-sans">Recent Tenant Rent Ledgers</text>
+      
+      <!-- Table Headers -->
+      <rect x="20" y="55" width="980" height="35" fill="#1e293b"/>
+      <text x="40" y="77" fill="#94a3b8" font-size="12" font-weight="bold" class="font-mono">TENANT NAME</text>
+      <text x="280" y="77" fill="#94a3b8" font-size="12" font-weight="bold" class="font-mono">UNIT / PROPERTY</text>
+      <text x="520" y="77" fill="#94a3b8" font-size="12" font-weight="bold" class="font-mono">AMOUNT</text>
+      <text x="700" y="77" fill="#94a3b8" font-size="12" font-weight="bold" class="font-mono">PAYMENT MODE</text>
+      <text x="890" y="77" fill="#94a3b8" font-size="12" font-weight="bold" class="font-mono">STATUS</text>
+
+      <!-- Row 1 -->
+      <text x="40" y="125" fill="#ffffff" font-size="13" class="font-sans">Aditya Sharma</text>
+      <text x="280" y="125" fill="#94a3b8" font-size="13" class="font-sans">Flat 402, Tech Towers</text>
+      <text x="520" y="125" fill="#ffffff" font-size="13" font-weight="bold" class="font-sans">₹35,000</text>
+      <text x="700" y="125" fill="#94a3b8" font-size="13" class="font-sans">UPI AutoPay</text>
+      <rect x="880" y="110" width="80" height="22" rx="11" fill="#10b981" fill-opacity="0.2"/>
+      <text x="920" y="125" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">PAID</text>
+
+      <!-- Row 2 -->
+      <text x="40" y="175" fill="#ffffff" font-size="13" class="font-sans">Sneha Kapoor</text>
+      <text x="280" y="175" fill="#94a3b8" font-size="13" class="font-sans">Villa 12, Green Enclave</text>
+      <text x="520" y="175" fill="#ffffff" font-size="13" font-weight="bold" class="font-sans">₹65,000</text>
+      <text x="700" y="175" fill="#94a3b8" font-size="13" class="font-sans">NetBanking</text>
+      <rect x="880" y="160" width="80" height="22" rx="11" fill="#10b981" fill-opacity="0.2"/>
+      <text x="920" y="175" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">PAID</text>
+
+      <!-- Row 3 -->
+      <text x="40" y="225" fill="#ffffff" font-size="13" class="font-sans">Vikas Verma</text>
+      <text x="280" y="225" fill="#94a3b8" font-size="13" class="font-sans">Office 301, Cyber Heights</text>
+      <text x="520" y="225" fill="#ffffff" font-size="13" font-weight="bold" class="font-sans">₹1,20,000</text>
+      <text x="700" y="225" fill="#94a3b8" font-size="13" class="font-sans">NEFT Transfer</text>
+      <rect x="880" y="210" width="80" height="22" rx="11" fill="#00f0ff" fill-opacity="0.2"/>
+      <text x="920" y="225" fill="#00f0ff" font-size="11" font-weight="bold" text-anchor="middle">VERIFIED</text>
+    </g>
+  </g>
+
+  <!-- Lower Architecture section -->
+  <g transform="translate(60, 920)">
+    <text x="0" y="30" fill="#ffffff" font-size="28" font-weight="bold" class="font-sans">Key Rental Automation Modules</text>
+    <g transform="translate(0, 60)">
+      <rect width="520" height="150" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="25" y="40" fill="#00f0ff" font-size="18" font-weight="bold" class="font-sans">💬 WhatsApp Rent Concierge</text>
+      <text x="25" y="75" fill="#94a3b8" font-size="14" class="font-sans">Instant automated invoice generation, payment confirmation receipts, and customized landlord alerts without third-party app installations.</text>
+    </g>
+    <g transform="translate(560, 60)">
+      <rect width="520" height="150" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="25" y="40" fill="#10b981" font-size="18" font-weight="bold" class="font-sans">📑 Digital Lease &amp; KYC Verification</text>
+      <text x="25" y="75" fill="#94a3b8" font-size="14" class="font-sans">Aadhaar/PAN verification, instant stamp paper lease agreements, police verification trackers, and encrypted cloud contract archives.</text>
+    </g>
+  </g>
+
+
+  <!-- Footer Section -->
+  <rect y="1450" width="1200" height="150" fill="#060911"/>
+  <line x1="0" y1="1450" x2="1200" y2="1450" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="60" cy="1510" r="12" fill="#00f0ff"/>
+  <text x="85" y="1516" fill="#ffffff" font-size="18" font-weight="bold" class="font-sans">RentFlow</text>
+  <text x="85" y="1540" fill="#94a3b8" font-size="13" class="font-sans">Engineered with high performance and zero telemetry • Verified Platform</text>
+  <text x="1100" y="1525" fill="#64748b" font-size="13" text-anchor="end" class="font-mono">© 2026 Production Build</text>
+</svg>

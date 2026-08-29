@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="grad-06b6d4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="glow-06b6d4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .font-sans { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="#090d16"/>
+  <rect width="1200" height="600" fill="url(#glow-06b6d4)"/>
+
+  <!-- Top Navbar -->
+  <rect width="1200" height="70" fill="#0d1322" opacity="0.95"/>
+  <line x1="0" y1="70" x2="1200" y2="70" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="50" cy="35" r="14" fill="#06b6d4"/>
+  <text x="75" y="42" fill="#ffffff" font-size="20" font-weight="bold" class="font-sans">GoShuttles</text>
+  <rect x="750" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="840" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="930" y="22" width="70" height="26" rx="4" fill="#1e293b"/>
+  <rect x="1030" y="18" width="120" height="34" rx="17" fill="#06b6d4"/>
+  <text x="1090" y="40" fill="#000000" font-size="13" font-weight="bold" text-anchor="middle" class="font-sans">LAUNCH APP</text>
+
+  <!-- Custom Page Body Content -->
+  
+  <!-- Hero Section -->
+  <g transform="translate(60, 110)">
+    <rect width="250" height="30" rx="15" fill="#06b6d4" fill-opacity="0.2" stroke="#06b6d4" stroke-opacity="0.5"/>
+    <text x="125" y="20" fill="#22d3ee" font-size="12" font-weight="bold" text-anchor="middle" class="font-mono">🚐 REAL-TIME MOBILITY &amp; TRANSIT</text>
+    <text x="0" y="90" fill="#ffffff" font-size="44" font-weight="bold" class="font-sans">Airport &amp; City Shuttle</text>
+    <text x="0" y="140" fill="#06b6d4" font-size="44" font-weight="bold" class="font-sans">Live Fleet Booking App</text>
+    <text x="0" y="185" fill="#94a3b8" font-size="16" class="font-sans">Real-time GPS tracking, guaranteed seats, QR boarding passes, and fixed affordable fares.</text>
+  </g>
+
+  <!-- Live Map & Booking Interface -->
+  <g transform="translate(60, 330)">
+    <rect width="1080" height="540" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="2"/>
+    
+    <g transform="translate(30, 30)">
+      <rect width="360" height="480" rx="10" fill="#0f172a" stroke="#1e293b"/>
+      <text x="25" y="40" fill="#ffffff" font-size="16" font-weight="bold">Book Airport Shuttle</text>
+      
+      <rect x="25" y="65" width="310" height="45" rx="6" fill="#131b2e" stroke="#334155"/>
+      <text x="45" y="93" fill="#22d3ee" font-size="13">🟢 Pickup: Terminal 1, IGI Airport</text>
+
+      <rect x="25" y="125" width="310" height="45" rx="6" fill="#131b2e" stroke="#334155"/>
+      <text x="45" y="153" fill="#f87171" font-size="13">🔴 Drop: Cyber City Hub, Sec 29</text>
+
+      <text x="25" y="205" fill="#94a3b8" font-size="12" font-weight="bold">SELECT DEPARTURE SLOT</text>
+      <rect x="25" y="220" width="95" height="35" rx="4" fill="#06b6d4"/>
+      <text x="72" y="242" fill="#000000" font-size="12" font-weight="bold" text-anchor="middle">10:30 AM</text>
+      <rect x="130" y="220" width="95" height="35" rx="4" fill="#1e293b"/>
+      <text x="177" y="242" fill="#ffffff" font-size="12" text-anchor="middle">11:15 AM</text>
+      <rect x="235" y="220" width="100" height="35" rx="4" fill="#1e293b"/>
+      <text x="285" y="242" fill="#ffffff" font-size="12" text-anchor="middle">12:00 PM</text>
+
+      <rect x="25" y="280" width="310" height="90" rx="6" fill="#131b2e"/>
+      <text x="40" y="310" fill="#ffffff" font-size="14" font-weight="bold">AC Electric Executive Shuttle</text>
+      <text x="40" y="335" fill="#10b981" font-size="12">✓ Free Wi-Fi • USB Charging • GPS</text>
+      <text x="40" y="355" fill="#22d3ee" font-size="16" font-weight="bold">₹249 / seat</text>
+
+      <rect x="25" y="390" width="310" height="50" rx="8" fill="#06b6d4"/>
+      <text x="180" y="422" fill="#000000" font-size="15" font-weight="bold" text-anchor="middle">RESERVE SEAT NOW</text>
+    </g>
+
+    <g transform="translate(420, 30)">
+      <rect width="630" height="480" rx="10" fill="#0c1626" stroke="#1e293b"/>
+      <path d="M 50 100 Q 250 80 400 220 T 580 400" fill="none" stroke="#1e293b" stroke-width="24"/>
+      <path d="M 50 100 Q 250 80 400 220 T 580 400" fill="none" stroke="#06b6d4" stroke-width="4"/>
+
+      <circle cx="50" cy="100" r="12" fill="#10b981"/>
+      <text x="50" y="80" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Airport T1</text>
+
+      <circle cx="340" cy="180" r="18" fill="#06b6d4" stroke="#ffffff" stroke-width="2"/>
+      <text x="340" y="185" fill="#000000" font-size="12" text-anchor="middle">🚐</text>
+      <rect x="280" y="125" width="120" height="30" rx="4" fill="#0f172a" stroke="#06b6d4"/>
+      <text x="340" y="145" fill="#22d3ee" font-size="11" font-weight="bold" text-anchor="middle">ETA: 6 mins away</text>
+
+      <circle cx="580" cy="400" r="12" fill="#f87171"/>
+      <text x="580" y="430" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Cyber City</text>
+    </g>
+  </g>
+
+
+  <!-- Footer Section -->
+  <rect y="1450" width="1200" height="150" fill="#060911"/>
+  <line x1="0" y1="1450" x2="1200" y2="1450" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="60" cy="1510" r="12" fill="#06b6d4"/>
+  <text x="85" y="1516" fill="#ffffff" font-size="18" font-weight="bold" class="font-sans">GoShuttles</text>
+  <text x="85" y="1540" fill="#94a3b8" font-size="13" class="font-sans">Engineered with high performance and zero telemetry • Verified Platform</text>
+  <text x="1100" y="1525" fill="#64748b" font-size="13" text-anchor="end" class="font-mono">© 2026 Production Build</text>
+</svg>
