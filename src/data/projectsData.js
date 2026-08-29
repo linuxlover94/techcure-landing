@@ -260,7 +260,7 @@ export const FREE_APPS = [
         title: "Techcure ROI Calculator",
         tagline: "Digital Growth & Revenue Projection Engine",
         url: "/free-apps#roi-calculator",
-        displayUrl: "techcure.in/roi",
+        displayUrl: "techcurehq.com/free-apps",
         badge: "Business Tool",
         description: "Calculate traffic conversion uplift, average order value expansion, and projected monthly returns from custom high-velocity web engineering.",
         category: "Business",

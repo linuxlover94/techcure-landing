@@ -50,12 +50,26 @@ const comparisonData = [
 ];
 
 const WhyUs = () => {
+    const whyUsSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Why Choose Techcure - Engineering Superiority",
+        "url": "https://techcurehq.com/why-us",
+        "description": "Compare Techcure's zero-lock-in digital engineering against traditional marketing agencies and freelance teams. 100% IP ownership, sub-second speed, and 60% Senior Founder Grant.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Techcure",
+            "url": "https://techcurehq.com"
+        }
+    };
+
     return (
         <div className="pt-28 pb-20">
             <SEOHead
-                title="Why Choose Techcure | Engineering Superiority vs Traditional Agencies"
-                description="Compare Techcure's zero-lock-in, India-First digital engineering against traditional marketing agencies and freelance teams. 100% IP ownership and sub-second speed."
+                title="Why Choose Techcure - Engineering Superiority vs Traditional Agencies"
+                description="Compare Techcure's zero-lock-in digital engineering against traditional marketing agencies and freelance teams. 100% IP ownership, sub-second speed, and 60% Senior Founder Grant."
                 canonicalPath="/why-us"
+                schema={whyUsSchema}
             />
             {/* Page Header */}
             <section className="py-16 bg-transparent relative overflow-hidden">

@@ -27,11 +27,51 @@ const Home = () => {
         PORTFOLIO.find(p => p.id === 'goshuttles')
     ].filter(Boolean);
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How fast can Techcure launch my custom platform?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For standard high-velocity business sites, we deploy in 72 hours. Custom full-stack web applications and SaaS platforms typically take 2-3 weeks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I own 100% of the code and intellectual property?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "100%. Upon completion, the full Git repository, code, domain, and infrastructure are transferred directly to you. Zero vendor lock-in."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Techcure offer a Senior Citizen and Veteran discount?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Techcure provides a flat 60% subsidized grant for entrepreneurs aged 60 and above, retired professionals, and military veterans launching tech ventures."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What tech stack does Techcure engineer with?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We engineer primarily with React 19, Next.js, TypeScript, Tailwind CSS, and Cloudflare/AWS edge compute. We avoid slow WordPress and bloated CMS templates."
+                }
+            }
+        ]
+    };
+
     return (
         <div className="space-y-0">
             <SEOHead
                 title="High-Velocity Web Architecture & Digital Dominance"
                 canonicalPath="/"
+                schema={faqSchema}
             />
             <Hero />
             <SocialProof />

@@ -19,12 +19,38 @@ const Products = () => {
         ? PRODUCTS
         : PRODUCTS.filter(p => p.category === activeFilter);
 
+    const productsSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Techcure Proprietary Software Systems",
+        "itemListElement": PRODUCTS.map((product, index) => ({
+            "@type": "SoftwareApplication",
+            "position": index + 1,
+            "name": product.title,
+            "url": product.url || `https://techcurehq.com/case-study/${product.id}`,
+            "applicationCategory": product.category,
+            "operatingSystem": "Web, Cloud, Cross-Platform",
+            "description": product.tagline,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "Techcure",
+                "url": "https://techcurehq.com"
+            }
+        }))
+    };
+
     return (
         <div className="pt-28 pb-20">
             <SEOHead
                 title="Proprietary Software Systems & SaaS Products"
                 description="Explore battle-tested proprietary software engineered by Techcure, including InkLeaf zero-knowledge vault, RentFlow PropTech OS, and MathSheet edge engine."
                 canonicalPath="/products"
+                schema={productsSchema}
             />
             {/* Page Header */}
             <section className="py-16 md:py-20 bg-transparent relative overflow-hidden">

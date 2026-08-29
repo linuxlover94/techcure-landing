@@ -244,12 +244,46 @@ const CaseStudy = () => {
         };
     }, []);
 
+    const caseStudySchema = {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": `${study.title} Architectural Case Study: ${study.subtitle || study.tagline}`,
+        "description": study.tagline || study.description,
+        "image": study.previewImage ? `https://techcurehq.com${study.previewImage}` : "https://techcurehq.com/og-image.png",
+        "author": {
+            "@type": "Organization",
+            "name": "Techcure Engineering Team",
+            "url": "https://techcurehq.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Techcure",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://techcurehq.com/favicon.svg"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://techcurehq.com/case-study/${study.id}`
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": study.title,
+            "applicationCategory": study.category,
+            "operatingSystem": "Web / Cloud"
+        },
+        "keywords": Array.isArray(study.techStack) ? study.techStack.join(", ") : "React, Next.js, Architecture"
+    };
+
     return (
         <div className="pt-28 pb-24">
             <SEOHead
                 title={`${study.title} Case Study | Engineering Architecture Deep Dive`}
                 description={`Technical case study on how Techcure engineered ${study.title}: ${study.tagline}. Full architectural breakdown, use cases, and benchmarks.`}
                 canonicalPath={`/case-study/${study.id}`}
+                ogImage={study.previewImage ? `https://techcurehq.com${study.previewImage}` : undefined}
+                schema={caseStudySchema}
             />
 
             {/* Breadcrumb Bar */}

@@ -6,6 +6,7 @@ import Card from '../ui/Card';
 import { Send, MapPin, Mail, Phone, MessageSquare, CheckCircle2 } from 'lucide-react';
 
 const Contact = () => {
+    const [inquiryType, setInquiryType] = useState('standard'); // 'standard' | 'senior_grant'
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -23,17 +24,20 @@ const Contact = () => {
         e.preventDefault();
         const { name, email, subject, message } = formData;
         
-        const formattedText = `*🔥 New Project Inquiry - Techcure*\n\n` +
-            `*👤 Name:* ${name.trim()}\n` +
+        const prefix = inquiryType === 'senior_grant' 
+            ? `*🎖️ SENIOR FOUNDER / VETERAN GRANT APPLICATION (60% SUBSIDY)*\n\n`
+            : `*🔥 NEW PROJECT INQUIRY - TECHCURE*\n\n`;
+
+        const formattedText = `${prefix}` +
+            `*👤 Name / Founder:* ${name.trim()}\n` +
             `*📧 Email:* ${email.trim()}\n` +
-            `*📌 Subject:* ${subject.trim()}\n` +
+            `*📌 Project Type / Track:* ${subject.trim()} ${inquiryType === 'senior_grant' ? '(60% Senior Grant)' : ''}\n` +
             `*💬 Project Brief:*\n${message.trim()}\n\n` +
-            `_Sent via Techcure Web Architecture Portal_`;
+            `_Sent via Techcure Web Architecture Portal (techcurehq.com)_`;
 
         const whatsappUrl = `https://wa.me/918188838966?text=${encodeURIComponent(formattedText)}`;
         
         setIsSubmitted(true);
-        // Use direct navigation to prevent mobile popup blockers
         window.location.href = whatsappUrl;
     };
 
@@ -119,15 +123,42 @@ const Contact = () => {
                         viewport={{ once: true }}
                     >
                         <Card className="p-8 bg-card/70 backdrop-blur-xl border-border shadow-2xl">
-                            <div className="mb-6 pb-4 border-b border-border flex items-center justify-between">
+                            <div className="mb-6 pb-4 border-b border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                                 <div>
                                     <h4 className="text-xl font-bold font-head text-foreground">Send Project Brief</h4>
-                                    <p className="text-xs text-muted-foreground mt-0.5">Directly connected to our engineering WhatsApp</p>
+                                    <p className="text-xs text-muted-foreground mt-0.5">Directly connected to our engineering WhatsApp hotline</p>
                                 </div>
-                                <span className="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-mono font-semibold flex items-center gap-1">
+                                <span className="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-mono font-semibold inline-flex items-center gap-1 self-start sm:self-auto">
                                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                                     WhatsApp Live
                                 </span>
+                            </div>
+
+                            {/* Track Selector */}
+                            <div className="grid grid-cols-2 gap-2 p-1 bg-secondary/80 rounded-xl mb-6 border border-border">
+                                <button
+                                    type="button"
+                                    onClick={() => setInquiryType('standard')}
+                                    className={`py-2 px-3 rounded-lg text-xs font-mono font-medium transition-all ${
+                                        inquiryType === 'standard'
+                                            ? 'bg-primary text-primary-foreground shadow-sm'
+                                            : 'text-muted-foreground hover:text-foreground'
+                                    }`}
+                                >
+                                    Standard Project (72h)
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setInquiryType('senior_grant')}
+                                    className={`py-2 px-3 rounded-lg text-xs font-mono font-medium transition-all flex items-center justify-center gap-1.5 ${
+                                        inquiryType === 'senior_grant'
+                                            ? 'bg-amber-500 text-zinc-950 font-bold shadow-sm'
+                                            : 'text-amber-400/80 hover:text-amber-300'
+                                    }`}
+                                >
+                                    <span>🎖️ 60+ Senior Grant</span>
+                                    <span className="text-[10px] bg-amber-400/20 text-amber-300 px-1.5 py-0.5 rounded">-60%</span>
+                                </button>
                             </div>
 
                             <form className="space-y-5" onSubmit={handleSubmit}>

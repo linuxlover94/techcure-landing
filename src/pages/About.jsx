@@ -82,12 +82,45 @@ const MILESTONES = [
 ];
 
 const About = () => {
+    const aboutSchema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Techcure Leadership & Origin",
+        "url": "https://techcurehq.com/about",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Techcure",
+            "url": "https://techcurehq.com",
+            "employee": [
+                {
+                    "@type": "Person",
+                    "name": "Ved Prakash Pandey",
+                    "jobTitle": "Founder & Lead Architect",
+                    "description": "Full-stack systems architect and distributed edge computing specialist spearheading core architecture and client-side encryption."
+                },
+                {
+                    "@type": "Person",
+                    "name": "Yogesh Pathak",
+                    "jobTitle": "Chief Marketing Officer (CMO)",
+                    "description": "Growth strategist and digital market penetration architect directing commercial expansion and algorithmic SEO."
+                },
+                {
+                    "@type": "Person",
+                    "name": "Ayush Srivastava",
+                    "jobTitle": "Chief Financial Officer (CFO)",
+                    "description": "Financial strategist and operational growth advisor directing capital strategy and corporate governance."
+                }
+            ]
+        }
+    };
+
     return (
         <div className="pt-28 pb-20">
             <SEOHead
-                title="About Us & Leadership Team | Techcure"
+                title="About Us & Leadership Team"
                 description="Meet the leadership team behind Techcure: Ved Prakash Pandey (Founder), Yogesh Pathak (Marketing Chief), and Ayush Srivastava (CFO). Engineering digital monopolies and high-velocity systems."
                 canonicalPath="/about"
+                schema={aboutSchema}
             />
 
             {/* Hero Section */}

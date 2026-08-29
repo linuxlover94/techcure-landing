@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+# Host Specification
+Host: https://techcurehq.com
+
 # Sitemaps
-Sitemap: https://techcure.in/sitemap.xml
+Sitemap: https://techcurehq.com/sitemap.xml

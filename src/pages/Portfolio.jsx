@@ -26,12 +26,29 @@ const Portfolio = () => {
         ? PORTFOLIO
         : PORTFOLIO.filter(p => p.category === activeFilter);
 
+    const portfolioSchema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Techcure Engineering Portfolio",
+        "url": "https://techcurehq.com/portfolio",
+        "description": "Client platforms engineered for high-throughput telecom commerce, Vedic computing, NGO heritage, and smart transit mobility.",
+        "hasPart": PORTFOLIO.map(project => ({
+            "@type": "SoftwareApplication",
+            "name": project.title,
+            "applicationCategory": project.category,
+            "operatingSystem": "Web, Mobile, Cloud",
+            "url": project.url || `https://techcurehq.com/case-study/${project.id}`,
+            "description": project.tagline
+        }))
+    };
+
     return (
         <div className="pt-28 pb-20">
             <SEOHead
                 title="Client Showcase & Engineering Portfolio"
                 description="Proven digital platforms engineered for high-throughput telecom commerce (WiCom), Vedic computing (Jyotish Engine), NGO heritage, and smart transit (GoShuttles)."
                 canonicalPath="/portfolio"
+                schema={portfolioSchema}
             />
             {/* Page Header */}
             <section className="py-16 md:py-20 bg-transparent relative overflow-hidden">

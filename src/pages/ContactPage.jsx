@@ -7,12 +7,33 @@ import ScrambleText from '../components/ui/ScrambleText';
 import SEOHead from '../components/ui/SEOHead';
 
 const ContactPage = () => {
+    const contactSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Techcure Engineering Team",
+        "url": "https://techcurehq.com/contact",
+        "description": "Connect directly with Techcure senior software engineers for custom SaaS development, cloud systems, and high-velocity web platforms.",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Techcure",
+            "telephone": "+91 81888 38966",
+            "email": "hello@techcure.in",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-8188838966",
+                "contactType": "Engineering Sales & Architecture Inquiries",
+                "availableLanguage": ["English", "Hindi"]
+            }
+        }
+    };
+
     return (
         <div className="pt-28 pb-20">
             <SEOHead
                 title="Start Your Project | Direct Engineering Contact"
                 description="Connect directly with Techcure senior software engineers in Lucknow, Ayodhya, and Bangalore for custom SaaS development, cloud systems, and high-velocity web platforms."
                 canonicalPath="/contact"
+                schema={contactSchema}
             />
             {/* Page Header */}
             <section className="py-16 bg-transparent relative overflow-hidden">
