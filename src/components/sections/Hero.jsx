@@ -31,9 +31,21 @@ const Hero = () => {
                     </p>
 
                     {/* Senior & Veteran Founder Grant Callout */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-secondary/80 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-mono mb-8 backdrop-blur-sm max-w-xl mx-auto">
-                        <span className="text-base">🎖️</span>
-                        <span><strong>Senior Founder Grant:</strong> Flat <strong>60% Off</strong> for entrepreneurs aged 60+ &amp; veterans launching tech ventures.</span>
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl bg-secondary/80 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-mono mb-8 backdrop-blur-md max-w-2xl mx-auto shadow-lg shadow-amber-500/5 hover:border-amber-500/50 transition-all group">
+                        <div className="flex items-center gap-2.5 text-left">
+                            <span className="text-xl shrink-0 p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">🎖️</span>
+                            <div>
+                                <strong className="text-amber-300 font-bold">Senior Founder Grant (Flat 60% Off):</strong>
+                                <p className="text-[11px] sm:text-xs text-amber-200/80 font-sans mt-0.5">Dedicated digital enablement for entrepreneurs aged 60+ &amp; military veterans.</p>
+                            </div>
+                        </div>
+                        <a
+                            href="/senior-grant"
+                            className="shrink-0 px-3.5 py-1.5 rounded-xl bg-amber-400 text-zinc-950 font-bold text-xs hover:bg-amber-300 transition-all flex items-center gap-1 group-hover:translate-x-0.5 shadow-sm"
+                        >
+                            <span>Learn &amp; Apply</span>
+                            <ArrowRight size={12} />
+                        </a>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

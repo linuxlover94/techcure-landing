@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap } from 'lucide-react';
 import Hero from '../components/sections/Hero';
-import SocialProof from '../components/sections/SocialProof';
+import TechWeUse from '../components/sections/TechWeUse';
 import CoreCapabilities from '../components/sections/CoreCapabilities';
 import Features from '../components/sections/Features';
-import TechStack from '../components/sections/TechStack';
 import Process from '../components/sections/Process';
 import Testimonials from '../components/sections/Testimonials';
 import Pricing from '../components/sections/Pricing';
@@ -60,7 +59,7 @@ const Home = () => {
                 "name": "What tech stack does Techcure engineer with?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We engineer primarily with React 19, Next.js, TypeScript, Tailwind CSS, and Cloudflare/AWS edge compute. We avoid slow WordPress and bloated CMS templates."
+                    "text": "We engineer primarily with React 19, Next.js, TypeScript, PostgreSQL, Redis, Tailwind CSS, and Cloudflare/AWS edge compute. We avoid slow WordPress and bloated CMS templates."
                 }
             }
         ]
@@ -74,7 +73,7 @@ const Home = () => {
                 schema={faqSchema}
             />
             <Hero />
-            <SocialProof />
+            <TechWeUse />
 
             {/* Featured Platforms & Flagship Showcase on Home */}
             <section className="py-24 bg-transparent relative overflow-hidden">
@@ -140,7 +139,6 @@ const Home = () => {
 
             <CoreCapabilities />
             <Features />
-            <TechStack />
             <Process />
             <Testimonials />
             <Pricing />
