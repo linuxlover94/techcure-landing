@@ -10,6 +10,7 @@ const NAV_ITEMS = [
     { label: 'Products', path: '/products' },
     { label: 'Portfolio', path: '/portfolio' },
     { label: 'Free Apps', path: '/free-apps' },
+    { label: 'Blog', path: '/blog' },
     { label: 'Why Us', path: '/why-us' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' }

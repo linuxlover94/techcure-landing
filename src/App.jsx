@@ -17,6 +17,8 @@ import WhyUs from './pages/WhyUs';
 import About from './pages/About';
 import CaseStudy from './pages/CaseStudy';
 import ContactPage from './pages/ContactPage';
+import BlogListing from './pages/BlogListing';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
               <Route path="/why-us" element={<WhyUs />} />
               <Route path="/about" element={<About />} />
               <Route path="/case-study/:slug" element={<CaseStudy />} />
+              <Route path="/blog" element={<BlogListing />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<Home />} />
             </Routes>

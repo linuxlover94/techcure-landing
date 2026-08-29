@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Techcure | High-Velocity Web Architecture &amp; Engineering Dispatches</title>
+    <link>https://techcurehq.com/blog</link>
+    <description>Deep architectural teardowns on React 19, WebAssembly cryptography, sub-second edge performance, and zero-bloat software engineering.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Aug 2026 05:40:00 GMT</lastBuildDate>
+    <atom:link href="https://techcurehq.com/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Mastering React 19 for Enterprise Web Architecture &amp; Sub-Second Speed</title>
+      <link>https://techcurehq.com/blog/mastering-react-19-for-enterprise-web-architecture</link>
+      <guid>https://techcurehq.com/blog/mastering-react-19-for-enterprise-web-architecture</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <description>An architectural deep-dive into React 19, Server Actions, asset preloading, and compiler optimizations for high-traffic web applications.</description>
+      <author>hello@techcure.in (Ved Prakash Pandey)</author>
+      <category>Architecture</category>
+    </item>
+
+    <item>
+      <title>Engineering Zero-Knowledge Web Vaults with Argon2id WASM &amp; AES-256</title>
+      <link>https://techcurehq.com/blog/zero-knowledge-web-vaults-argon2id-aes-256</link>
+      <guid>https://techcurehq.com/blog/zero-knowledge-web-vaults-argon2id-aes-256</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A technical breakdown of client-side encryption, WebAssembly key derivation, and local-first data synchronization in modern web browsers.</description>
+      <author>hello@techcure.in (Ved Prakash Pandey)</author>
+      <category>Security</category>
+    </item>
+
+    <item>
+      <title>Delivering Sub-Second Global Latency with Cloudflare Pages &amp; Vercel Edge</title>
+      <link>https://techcurehq.com/blog/sub-second-global-edge-cloudflare-pages</link>
+      <guid>https://techcurehq.com/blog/sub-second-global-edge-cloudflare-pages</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A comprehensive guide to edge caching, global asset routing, single-bundle inlining, and automated continuous delivery.</description>
+      <author>hello@techcure.in (Ved Prakash Pandey)</author>
+      <category>Performance</category>
+    </item>
+
+    <item>
+      <title>Why Techcure Offers a Flat 60% Grant to Senior &amp; Veteran Founders</title>
+      <link>https://techcurehq.com/blog/empowering-senior-entrepreneurs-techcure-grant</link>
+      <guid>https://techcurehq.com/blog/empowering-senior-entrepreneurs-techcure-grant</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <description>The philosophy behind Techcure's 60% Senior Citizen &amp; Military Veteran Founder Grant, and how we are bridging the technology divide.</description>
+      <author>hello@techcure.in (Yogesh Pathak)</author>
+      <category>Social Impact</category>
+    </item>
+  </channel>
+</rss>
