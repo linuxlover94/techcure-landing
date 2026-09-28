@@ -318,6 +318,246 @@ export const PORTFOLIO = [
             "Direct WhatsApp inquiry and booking concierge",
             "Optimized for high traffic spikes during major religious festivals"
         ]
+    },
+    {
+        id: "advenjeans",
+        title: "Adven Jeans B2B Wholesale",
+        client: "Adven Jeanswear (Shri Balaji Garments)",
+        tagline: "High-Volume B2B Denim Manufacturer & Catalog Architecture",
+        url: "https://advenjeans.in",
+        liveUrl: "https://advenjeans.in",
+        displayUrl: "advenjeans.in",
+        isLive: true,
+        status: "MIGRATED FROM WORDPRESS / LIVE",
+        statusColor: "text-indigo-400 bg-indigo-500/10 border-indigo-500/30",
+        category: "WordPress Migration",
+        badge: "100% Zero-Loss WP Migration",
+        badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/30",
+        previewImage: "/previews/advenjeans.png",
+        image: "/previews/advenjeans.png",
+        svgPreview: "/previews/advenjeans.png",
+        description: "Migrated 1,500+ denim design patterns and 21 years of manufacturing inventory from a bloated WooCommerce store to a custom, sub-400ms Astro & React architecture with 100% zero data loss and direct WhatsApp RFQ checkout.",
+        fullDescription: "Adven Jeans is an established Delhi denim manufacturing giant with 1M+ jeans produced and 50+ retail partners. Their legacy WordPress/WooCommerce site suffered from heavy database bottlenecks and 4.8s mobile load times. Techcure executed a 100% zero-data-loss migration to a custom Astro/React architecture with automated WebP image pipelines, WhatsApp bulk order routing, and edge caching.",
+        features: [
+            "100% Zero-Data-Loss Migration from Legacy WooCommerce with URL Slug & SEO Preservation",
+            "High-Speed B2B Catalog Visualizer Rendering 1,500+ Denim SKUs in Sub-300ms",
+            "Direct Factory Wholesale Inquiry Engine Routing Buyer Specs to WhatsApp API",
+            "Optimized Responsive Mobile Experience for Indian Wholesale Garment Distributors",
+            "Zero Plugin Dependency with 10x Reduction in Server Compute & Hosting Overheads"
+        ],
+        techStack: ["Astro", "React", "Tailwind CSS", "Cloudflare Edge", "WhatsApp API"],
+        tags: ["WordPress Migration", "WordPress to React", "Zero Data Loss", "B2B E-Commerce", "Astro"],
+        metrics: {
+            loadTime: "0.4s (From 4.8s)",
+            conversion: "+62% Wholesale Leads",
+            migrationLoss: "0% (Zero Data Loss)"
+        },
+        highlights: [
+            "Migrated 1,500+ design patterns and product SKUs with 100% fidelity",
+            "Preserved all legacy product URLs and canonical tags, protecting Google organic rankings",
+            "Eliminated 24 vulnerable WordPress plugins and heavy SQL database overhead",
+            "Implemented direct factory-to-retailer WhatsApp RFQ (Request for Quote) system"
+        ]
+    },
+    {
+        id: "drishtiedu",
+        title: "Drishti Tutorial Pvt. Ltd.",
+        client: "Drishti Tutorial Pvt. Ltd.",
+        tagline: "North Bihar's Premier EdTech & Competitive Examination Architecture",
+        url: "https://drishtiedu.in",
+        liveUrl: "https://drishtiedu.in",
+        displayUrl: "drishtiedu.in",
+        isLive: true,
+        status: "LIVE PRODUCTION",
+        statusColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
+        category: "EdTech & Media",
+        badge: "20+ Yrs Academic Excellence",
+        badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+        previewImage: "/previews/drishtiedu.png",
+        image: "/previews/drishtiedu.png",
+        svgPreview: "/previews/drishtiedu.png",
+        description: "A high-performance modern Astro v7 digital learning portal and ExamRadar platform serving 25,000+ students and competitive aspirants across Bihar for UPSC, BPSC, SSC, and Banking.",
+        fullDescription: "Founded in 2005 under the visionary mentorship of Rajiv Ranjan in Muzaffarpur, Drishti Tutorial has guided over 5,000 students to government selections. Techcure engineered an ultra-fast, lightweight digital campus featuring the interactive ExamRadar syllabus tracker, online admissions, faculty dossiers, and digital study resources engineered to run flawlessly on low-bandwidth Tier-2 and Tier-3 mobile networks.",
+        features: [
+            "Astro v7 Static Site Architecture with Edge Rendering for Sub-300ms Interactive Load",
+            "Interactive ExamRadar Tracking Upcoming UPSC, BPSC, Railway & SSC Notifications",
+            "Digital Admission Portal with Instant Student Document Upload & Verification",
+            "Bilingual Hindi & English Interface Tailored for Regional North Bihar Aspirants",
+            "Zero-Lag Resource Library Delivering Curated PDF Notes & Previous Year Questions"
+        ],
+        techStack: ["Astro 7", "React", "TypeScript", "Tailwind CSS", "Cloudflare Pages"],
+        tags: ["Astro 7", "React", "EdTech", "Bilingual i18n", "Tier-2/3 Network Optimized"],
+        metrics: {
+            studentsServed: "25,000+ Students",
+            selections: "5,000+ Selections",
+            speed: "< 300ms First Paint"
+        },
+        highlights: [
+            "Lightweight client bundles optimized for 2G/3G mobile connectivity in regional districts",
+            "Interactive ExamRadar alerting students to critical exam deadlines and application windows",
+            "Comprehensive course curriculum viewer spanning Foundation, General Studies, and Test Series",
+            "Direct counselor WhatsApp dispatch with automated scholarship inquiry capture"
+        ]
+    },
+    {
+        id: "presskitaquat",
+        title: "Press Ki Taquat National Daily",
+        client: "Press Ki Taquat Media Group",
+        tagline: "CBC / DAVP Approved Multi-Edition Hindi & Punjabi Digital Newspaper",
+        url: "https://presskitaquat.com",
+        liveUrl: "https://presskitaquat.com",
+        displayUrl: "presskitaquat.com",
+        isLive: true,
+        status: "MIGRATED FROM WORDPRESS / LIVE",
+        statusColor: "text-red-400 bg-red-500/10 border-red-500/30",
+        category: "WordPress Migration",
+        badge: "100% Zero-Loss WP Migration",
+        badgeColor: "bg-red-500/10 text-red-400 border-red-500/30",
+        previewImage: "/previews/presskitaquat.png",
+        image: "/previews/presskitaquat.png",
+        svgPreview: "/previews/presskitaquat.png",
+        description: "Migrated from a crash-prone WordPress newspaper installation to a blazing fast React & Astro digital news architecture with zero data loss, interactive E-Paper viewer, and multi-edition switching across Delhi, Patiala, and Chandigarh.",
+        fullDescription: "Press Ki Taquat is an influential daily newspaper accredited by CBC/DAVP Government of India. Their legacy WordPress backend suffered catastrophic server outages under breaking news traffic surges and fragile PDF e-paper plugins. Techcure performed a meticulous 100% zero-data-loss migration, porting every article and e-paper archive into a headless, edge-cached React architecture.",
+        features: [
+            "100% Zero-Data-Loss Migration from Legacy WordPress CMS with Slug Preservation",
+            "High-Velocity Digital E-Paper Viewer with Vector Zoom & Edition Date Picker",
+            "Multi-Edition Editorial Switcher (Delhi, Patiala, Chandigarh, Punjab/Haryana State)",
+            "Instant Breaking News Carousel with Sub-50ms Edge Cache Invalidation",
+            "Optimized WebP Image Delivery Reducing Mobile Data Consumption by 75%"
+        ],
+        techStack: ["React", "Astro", "Tailwind CSS", "Cloudflare Edge", "PDF.js"],
+        tags: ["WordPress Migration", "WordPress to React", "Zero Data Loss", "Digital Journalism", "E-Paper Engine"],
+        metrics: {
+            dataLoss: "0% (Zero Data Loss)",
+            trafficCapacity: "100,000+ Concurrent",
+            hostingCost: "-70% Server Costs"
+        },
+        highlights: [
+            "Preserved 10+ years of digital news archives and Google News ranking signals",
+            "Interactive high-definition digital E-Paper reader with pinch-to-zoom on mobile",
+            "Sub-500ms First Contentful Paint even on busy mobile cellular networks",
+            "Eliminated WordPress security vulnerabilities (SQL injection, plugin exploit vectors)"
+        ]
+    },
+    {
+        id: "ubindianews",
+        title: "UB India News Portal",
+        client: "UB India News Media Network",
+        tagline: "High-Traffic Hindi Breaking News, Politics & Investigative Journalism",
+        url: "https://ubindianews.com",
+        liveUrl: "https://ubindianews.com",
+        displayUrl: "ubindianews.com",
+        isLive: true,
+        status: "MIGRATED FROM WORDPRESS / LIVE",
+        statusColor: "text-amber-400 bg-amber-500/10 border-amber-500/30",
+        category: "WordPress Migration",
+        badge: "100% Zero-Loss WP Migration",
+        badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/30",
+        previewImage: "/previews/ubindianews.png",
+        image: "/previews/ubindianews.png",
+        svgPreview: "/previews/ubindianews.png",
+        description: "Full enterprise migration of high-traffic Hindi news portal from a slow WordPress monolith to a resilient React edge architecture. Achieved 100% zero data loss, sub-60ms TTFB, and flawless Google Discover SEO compliance.",
+        fullDescription: "UB India News publishes fast-moving state and national political updates and investigative reports across Bihar and India. In WordPress, high traffic surges during elections repeatedly triggered database timeouts and slow 504 gateway errors. Techcure migrated the entire editorial repository into an edge-rendered React system with structured Google News schema and zero data loss.",
+        features: [
+            "Complete WordPress Database Migration with 100% Zero Data Loss & Intact Metadata",
+            "Google Discover & Google News AMP/Schema Optimization for Instant Crawling",
+            "Devanagari Font Subsetting & WebP Compression for Sub-60ms Edge Response",
+            "Real-Time Breaking News Ticker with Automated Webhook Cache Purging",
+            "Serverless High-Concurrency Architecture Handling Millions of Monthly Pageviews"
+        ],
+        techStack: ["React", "Next.js / Astro", "Tailwind CSS", "Redis Cache", "Cloudflare CDN"],
+        tags: ["WordPress Migration", "WordPress to React", "Zero Data Loss", "News Portal", "Edge Caching"],
+        metrics: {
+            ttfb: "65ms (From 2.8s)",
+            uptime: "99.99% During Surges",
+            dataFidelity: "100% Zero Loss"
+        },
+        highlights: [
+            "Migrated tens of thousands of Hindi articles with zero broken links or 404s",
+            "Instantaneous Google Discover indexation through automated structured schema",
+            "Zero server crashes during intense regional election breaking news peaks",
+            "Monetization-ready ad slot placements without Cumulative Layout Shift (CLS: 0.0)"
+        ]
+    },
+    {
+        id: "ramarshpalace",
+        title: "Hotel Ramarsh Palace Luxury Stays",
+        client: "Hotel Ramarsh Palace (Ayodhya)",
+        tagline: "Luxury Boutique Hotel on Rampath, Ranopali, Ayodhya near Ram Janmabhoomi",
+        url: "https://ramarshpalace.com",
+        liveUrl: "https://ramarshpalace.com",
+        displayUrl: "ramarshpalace.com",
+        isLive: true,
+        status: "MIGRATED FROM WORDPRESS / LIVE",
+        statusColor: "text-amber-400 bg-amber-500/10 border-amber-500/30",
+        category: "WordPress Migration",
+        badge: "100% Zero-Loss WP Migration",
+        badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/30",
+        previewImage: "/previews/ramarshpalace.png",
+        image: "/previews/ramarshpalace.png",
+        svgPreview: "/previews/ramarshpalace.png",
+        description: "Migrated from a sluggish, generic WordPress hotel theme to a Next.js 15 App Router architecture with custom direct room booking, WhatsApp VIP concierge, and 0% OTA commission model.",
+        fullDescription: "Hotel Ramarsh Palace is a 12-room luxury hotel located on Rampath, Ranopali in Ayodhya (just 1.8 km from Shri Ram Janmabhoomi Mandir). Their previous WordPress site had slow booking engines and poor mobile booking conversion, forcing them to surrender 20% commissions to OTAs. Techcure rebuilt the platform on Next.js 15, integrating direct WhatsApp reservation workflows, real-time suite showcase, and pure vegetarian dining menus.",
+        features: [
+            "Zero-Data-Loss Migration from Legacy WordPress Hotel Site with URL Canonical Preservation",
+            "Direct 0% OTA Commission Booking Engine Slashing Intermediary Commission Fees",
+            "Interactive Room & Suite Showcase with High-Res Image Galleries & Amenity Grids",
+            "Rampath / Ram Janmabhoomi Distance & Pilgrim Transit Visualizer",
+            "Instant WhatsApp VIP Concierge for Seamless Pilgrim Check-in and Darshan Assistance"
+        ],
+        techStack: ["Next.js 15", "React 19", "Tailwind CSS", "WhatsApp Cloud API", "Cloudflare"],
+        tags: ["WordPress Migration", "WordPress to Next.js", "Zero Data Loss", "Hospitality", "Ayodhya HQ"],
+        metrics: {
+            directBookings: "+78% Direct Inquiries",
+            commissionSaved: "0% OTA Fee on Direct",
+            speed: "0.3s First Contentful Paint"
+        },
+        highlights: [
+            "Engineered 1-click WhatsApp VIP booking flow converting pilgrims in under 45 seconds",
+            "Showcases 12 luxury rooms, executive suites, and on-site pure vegetarian dining",
+            "Optimized local Ayodhya SEO driving high-intent pilgrim searches directly to the hotel",
+            "100% zero data loss during content migration with polished luxury visual branding"
+        ]
+    },
+    {
+        id: "helpsafety",
+        title: "Help Safety and Care Foundation",
+        client: "Help Safety and Care Foundation",
+        tagline: "Ayodhya Sacred Corridor Seva, Disaster Relief & Public Welfare NGO",
+        url: "https://helpsafety.org",
+        liveUrl: "https://helpsafety.org",
+        displayUrl: "helpsafety.org",
+        isLive: true,
+        status: "LIVE PRODUCTION",
+        statusColor: "text-blue-400 bg-blue-500/10 border-blue-500/30",
+        category: "NGO & Cultural Heritage",
+        badge: "80G Certified Non-Profit",
+        badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/30",
+        previewImage: "/previews/helpsafety.png",
+        image: "/previews/helpsafety.png",
+        svgPreview: "/previews/helpsafety.png",
+        description: "An ultra-fast Astro & React digital welfare platform powering Ayodhya Sacred Corridor pilgrim seva, free medical camps, disaster relief, and instant Section 80G tax-deductible donation receipts.",
+        fullDescription: "Help Safety and Care Foundation operates active community assistance missions across Ayodhya Dham and North India, providing food prasad, emergency healthcare, and rural welfare. Techcure engineered an accessible, transparent digital foundation portal featuring instant Section 80G tax receipt generation, volunteer mobilization workflows, and rich impact documentation.",
+        features: [
+            "Astro Modern Island Architecture with Instant 80G Tax-Deductible Donation Checkout",
+            "Interactive Ayodhya Sacred Corridor Seva Initiative & Medical Camp Operations Tracker",
+            "Volunteer Registration & Community Emergency Assistance Dispatch Pipeline",
+            "Automated WhatsApp & Email Donation Confirmation with Instant PDF Receipts",
+            "100/100 Lighthouse Performance with Zero Third-Party Advertising or Tracking Bloat"
+        ],
+        techStack: ["Astro", "React", "Tailwind CSS", "Razorpay NGO Suite", "Cloudflare Pages"],
+        tags: ["Astro", "React", "NGO & Welfare", "Ayodhya Seva", "80G Tax Exemption"],
+        metrics: {
+            mealsServed: "100,000+ Distributed",
+            performance: "100 / 100 Lighthouse",
+            taxStatus: "80G Certified"
+        },
+        highlights: [
+            "Instant Section 80G tax exemption receipt delivery via automated pipeline",
+            "Transparent fund allocation visualizer showcasing rural and pilgrim welfare projects",
+            "Mobile-first responsive design ensuring effortless donations from any smartphone",
+            "Zero server latency with global edge delivery on Cloudflare Pages"
+        ]
     }
 ];
 

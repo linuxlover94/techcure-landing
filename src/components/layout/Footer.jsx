@@ -44,6 +44,7 @@ const Footer = () => {
                         <h3 className="font-bold mb-4 text-foreground text-xs uppercase tracking-wider font-mono">SERVICES</h3>
                         <ul className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
                             <li><Link to="/services/web-development" className="hover:text-primary transition-colors">Next.js Web Apps</Link></li>
+                            <li><Link to="/services/wordpress-to-react-migration" className="hover:text-primary transition-colors text-indigo-400 font-medium">WP to React Migration (Zero-Loss)</Link></li>
                             <li><Link to="/services/saas-development" className="hover:text-primary transition-colors">SaaS &amp; MVP Build</Link></li>
                             <li><Link to="/services/ecommerce-development" className="hover:text-primary transition-colors">Headless E-Commerce</Link></li>
                             <li><Link to="/services/speed-optimization" className="hover:text-primary transition-colors">Speed Optimization</Link></li>

@@ -15,23 +15,39 @@ const Portfolio = () => {
 
     const categories = [
         'All',
+        'WordPress Migration',
         'E-Commerce & Telecom',
-        'AstroTech & Vedic Computing',
+        'EdTech & Media',
         'NGO & Cultural Heritage',
         'Mobility & Logistics',
-        'Travel & Hospitality'
+        'Travel & Hospitality',
+        'AstroTech & Vedic Computing'
     ];
 
     const filteredPortfolio = activeFilter === 'All'
         ? PORTFOLIO
-        : PORTFOLIO.filter(p => p.category === activeFilter);
+        : PORTFOLIO.filter(p => {
+            if (activeFilter === 'WordPress Migration') {
+                return p.category === 'WordPress Migration' || p.tags?.some(t => t.toLowerCase().includes('wordpress'));
+            }
+            if (activeFilter === 'EdTech & Media') {
+                return p.category === 'EdTech & Media' || p.tags?.some(t => t.toLowerCase().includes('edtech') || t.toLowerCase().includes('journalism') || t.toLowerCase().includes('news'));
+            }
+            if (activeFilter === 'Travel & Hospitality') {
+                return p.category === 'Travel & Hospitality' || p.tags?.some(t => t.toLowerCase().includes('hospitality') || t.toLowerCase().includes('tourism'));
+            }
+            if (activeFilter === 'E-Commerce & Telecom') {
+                return p.category === 'E-Commerce & Telecom' || p.tags?.some(t => t.toLowerCase().includes('commerce'));
+            }
+            return p.category === activeFilter;
+        });
 
     const portfolioSchema = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Techcure Engineering Portfolio",
         "url": "https://techcurehq.com/portfolio",
-        "description": "Client platforms engineered for high-throughput telecom commerce, Vedic computing, NGO heritage, and smart transit mobility.",
+        "description": "Client platforms engineered for high-throughput telecom commerce, zero-data-loss WordPress migrations, Vedic computing, NGO heritage, and smart transit mobility.",
         "hasPart": PORTFOLIO.map(project => ({
             "@type": "SoftwareApplication",
             "name": project.title,

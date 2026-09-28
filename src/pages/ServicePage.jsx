@@ -236,6 +236,26 @@ const ServicePage = () => {
                                     <ArrowRight size={13} />
                                 </Button>
                             </Link>
+
+                            {service.slug === 'wordpress-to-react-migration' && (
+                                <div className="mt-4 pt-4 border-t border-border/60">
+                                    <div className="text-xs font-mono text-muted-foreground uppercase mb-2">Other Zero-Loss Migrations:</div>
+                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                                        <Link to="/case-study/presskitaquat" className="p-2 rounded-lg bg-secondary/50 hover:bg-secondary border border-border text-foreground hover:text-primary transition-colors">
+                                            <div className="font-bold">Press Ki Taquat</div>
+                                            <div className="text-[10px] text-muted-foreground">National Newspaper</div>
+                                        </Link>
+                                        <Link to="/case-study/advenjeans" className="p-2 rounded-lg bg-secondary/50 hover:bg-secondary border border-border text-foreground hover:text-primary transition-colors">
+                                            <div className="font-bold">Adven Jeans</div>
+                                            <div className="text-[10px] text-muted-foreground">WooCommerce B2B</div>
+                                        </Link>
+                                        <Link to="/case-study/ramarshpalace" className="p-2 rounded-lg bg-secondary/50 hover:bg-secondary border border-border text-foreground hover:text-primary transition-colors">
+                                            <div className="font-bold">Hotel Ramarsh Palace</div>
+                                            <div className="text-[10px] text-muted-foreground">Luxury Hotel Booking</div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </Card>
                 </div>

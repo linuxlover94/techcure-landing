@@ -250,6 +250,69 @@ export const SERVICES = [
                 answer: "Google uses page speed and Core Web Vitals as a confirmed search ranking signal. Fast sites receive higher crawl frequency, better user engagement metrics, and higher keyword rankings over slower competitors."
             }
         ]
+    },
+    {
+        id: "wordpress-to-react-migration",
+        slug: "wordpress-to-react-migration",
+        title: "WordPress to React & Next.js Migration (100% Zero Data Loss Guarantee)",
+        shortTitle: "WordPress to React Migration",
+        tagline: "Migrate bloated WordPress, WooCommerce, and legacy PHP monoliths to sub-second React & Next.js architectures with 100% zero data loss and preserved Google rankings.",
+        metaTitle: "WordPress to React Migration Agency | 100% Zero Data Loss Guaranteed",
+        metaDescription: "Migrate slow WordPress & WooCommerce stores to custom React & Next.js apps. 100% zero data loss guarantee, preserved URL slugs, 10x speed boost. Proven case studies: UB India News, Press Ki Taquat, Adven Jeans, Ramarsh Palace.",
+        turnaround: "5 to 10 Days",
+        startingPrice: "₹24,999 / $599",
+        heroBadge: "100% Guaranteed Zero Data Loss Migration",
+        primaryBenefit: "10x faster page loads, 0% database bloat, 100% preserved SEO rankings, and zero plugin security vulnerabilities.",
+        overview: "WordPress powers millions of websites, but heavy plugins, slow MySQL queries, and bloated themes choke performance, destroy Google rankings, and expose businesses to security breaches. Techcure specializes in surgical, 100% zero-data-loss migrations from WordPress to custom React, Next.js, and Astro architectures. We migrate your entire database—articles, products, images, categories, and customer records—while preserving every single URL slug and SEO signal.",
+        deliverables: [
+            {
+                title: "100% Zero Data Loss Database Migration",
+                description: "Automated cryptographic ETL pipelines extract and port all posts, pages, custom fields, comments, user accounts, and media attachments with mathematical zero-loss verification."
+            },
+            {
+                title: "Exact URL Slug & SEO Canonical Preservation",
+                description: "Zero 404 broken links. We preserve 100% of your permalink structure, XML sitemaps, OpenGraph tags, and canonical schemas to protect and elevate existing Google search rankings."
+            },
+            {
+                title: "Sub-500ms Edge Performance & Core Web Vitals",
+                description: "Replaces slow 4-5s WordPress page loads with sub-500ms edge rendering on Cloudflare Pages and Next.js, achieving 95-100 Core Web Vitals across mobile and desktop."
+            },
+            {
+                title: "Zero Plugin Vulnerabilities & Clean Stack",
+                description: "Completely eliminate vulnerable PHP plugins, theme license fees, and SQL injection risks with static and edge-rendered code."
+            },
+            {
+                title: "Automated Media Modernization (WebP / AVIF)",
+                description: "Automatically batch-converts legacy JPEG/PNG media libraries into responsive WebP/AVIF formats, reducing image payloads by up to 80%."
+            },
+            {
+                title: "Zero-Downtime DNS Cutover & 60 Days Hypercare",
+                description: "Seamless cutover with zero downtime for your active users, backed by 60 days of direct architect monitoring and priority technical support."
+            }
+        ],
+        techStack: ["React 19", "Next.js 15", "Astro", "Cloudflare Edge", "PostgreSQL", "Node.js", "Redis"],
+        targetAudience: [
+            "High-traffic digital news portals and publishers crippled by slow WordPress databases (like UB India News & Press Ki Taquat)",
+            "WooCommerce apparel and wholesale stores losing conversions to slow checkouts (like Adven Jeans)",
+            "Hotels and boutique resorts suffering from clunky booking plugins and high OTA commissions (like Ramarsh Palace)",
+            "Enterprises frustrated by recurring WordPress plugin crashes, maintenance fees, and security vulnerabilities"
+        ],
+        caseStudyLink: "/case-study/ubindianews",
+        caseStudyName: "UB India News (WordPress to React, 100% Zero Loss, 65ms TTFB)",
+        faqs: [
+            {
+                question: "How do you guarantee 100% zero data loss during the WordPress migration?",
+                answer: "We use custom automated ETL (Extract, Transform, Load) scripts to extract your entire WordPress MySQL database—including custom post types, postmeta, taxonomies, comments, and media attachments. We perform automated cryptographic checksum validation between your legacy database and the new database before DNS cutover to mathematically guarantee zero missing records."
+            },
+            {
+                question: "Will our Google search rankings and URL links be affected?",
+                answer: "No. We enforce strict 1-to-1 canonical URL matching and automated 301 redirects for every existing URL path. We preserve all meta titles, descriptions, OpenGraph tags, and JSON-LD structured schemas. In fact, our clients routinely experience significant organic ranking uplifts within 14 days due to dramatic Core Web Vitals improvements."
+            },
+            {
+                question: "Will our team still be able to publish articles and manage content?",
+                answer: "Yes. We configure lightweight headless CMS workflows or custom admin dashboards that are 10x faster and easier to use than the cluttered WordPress admin panel, with zero plugin conflicts."
+            }
+        ]
     }
 ];
 

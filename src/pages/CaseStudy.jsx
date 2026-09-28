@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { 
     ArrowLeft, 
     ExternalLink, 
@@ -36,7 +36,13 @@ const CaseStudy = () => {
 
     // Fetch from centralized case studies data, fallback to generic project
     const rawProject = PRODUCTS.find(p => p.id === slug) || PORTFOLIO.find(p => p.id === slug) || PRODUCTS[0];
-    const study = CASE_STUDIES[slug] || {
+    const baseStudy = CASE_STUDIES[slug];
+    const study = baseStudy ? {
+        ...rawProject,
+        ...baseStudy,
+        tags: baseStudy.tags || rawProject?.tags || [],
+        isLive: baseStudy.isLive ?? rawProject?.isLive ?? true
+    } : {
         ...rawProject,
         liveUrl: rawProject.url || `https://techcure.in`,
         displayUrl: rawProject.displayUrl || rawProject.url || 'techcure.in',
@@ -317,6 +323,12 @@ const CaseStudy = () => {
                     <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-3xl">
                         {study.tagline}
                     </p>
+                    {Boolean(study.tags?.some(t => t.toLowerCase().includes('wordpress')) || study.category?.toLowerCase().includes('wordpress')) && (
+                        <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-mono font-semibold">
+                            <ShieldCheck size={14} className="text-indigo-400" />
+                            <span>100% Guaranteed WordPress Migration to Custom React App (Zero Data Loss)</span>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -597,6 +609,42 @@ const CaseStudy = () => {
                     </Card>
                 </div>
             </section>
+
+            {/* WordPress Migration Proof Banner if applicable */}
+            {Boolean(study.tags?.some(t => t.toLowerCase().includes('wordpress')) || study.category?.toLowerCase().includes('wordpress')) && (
+                <section className="container mx-auto px-6 mb-20">
+                    <div className="p-8 rounded-3xl bg-gradient-to-r from-indigo-950/40 via-card to-indigo-950/20 border border-indigo-500/30 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                        <div className="space-y-2">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-mono uppercase">
+                                <ShieldCheck size={13} />
+                                <span>Verified Production Proof</span>
+                            </div>
+                            <h3 className="text-xl sm:text-2xl font-head font-bold text-foreground">
+                                Migrate from Slow WordPress with <span className="text-indigo-400">100% Zero Data Loss</span>
+                            </h3>
+                            <p className="text-xs sm:text-sm text-muted-foreground max-w-xl leading-relaxed">
+                                Like {study.title}, we migrate thousands of legacy database posts, WooCommerce catalogs, room bookings, and canonical permalinks into high-velocity React/Next.js edge apps with zero downtime.
+                            </p>
+                        </div>
+                        <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+                            <Link to="/services/wordpress-to-react-migration">
+                                <Button variant="primary" size="sm" className="rounded-xl font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-md">
+                                    <span>Migration Service</span>
+                                </Button>
+                            </Link>
+                            <a
+                                href={`https://wa.me/918188838966?text=${encodeURIComponent(`Hi Techcure, I saw your ${study.title} case study and want to migrate our WordPress site to React with 100% zero data loss.`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button variant="secondary" size="sm" className="rounded-xl border border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/10">
+                                    <span>WhatsApp Migration Team</span>
+                                </Button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Direct CTA */}
             <section className="container mx-auto px-6 text-center">
