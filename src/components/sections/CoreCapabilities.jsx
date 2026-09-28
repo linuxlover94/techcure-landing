@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe, Layers, ShoppingBag, Smartphone, Database, Shield, Zap, KeyRound } from 'lucide-react';
+import { Globe, Layers, ShoppingBag, Smartphone, Database, Shield, Zap, KeyRound, ShieldCheck } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import Card from '../ui/Card';
 
@@ -46,6 +46,12 @@ const capabilities = [
         title: "Zero-Knowledge Security & Defense",
         description: "Client-side AES-256-GCM encryption, Argon2id key derivation, and strict Content Security Policies that protect proprietary enterprise assets.",
         badge: "AES-256 Vault"
+    },
+    {
+        icon: <ShieldCheck className="h-8 w-8 text-indigo-400" />,
+        title: "WordPress to React Migration",
+        description: "100% zero-data-loss guaranteed migration. Porting thousands of legacy articles, WooCommerce SKUs, and canonical SEO slugs to sub-second React edge apps.",
+        badge: "Zero Data Loss"
     },
     {
         icon: <KeyRound className="h-8 w-8 text-primary" />,

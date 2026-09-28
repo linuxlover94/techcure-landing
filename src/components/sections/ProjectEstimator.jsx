@@ -52,6 +52,15 @@ const PROJECT_TYPES = [
         basePriceUSD: 189,
         baseDays: '48 - 72 Hours',
         desc: 'Upgrading slow legacy WordPress/custom sites to sub-500ms edge architectures with 95+ score.'
+    },
+    {
+        id: 'wordpress-migration',
+        name: 'WordPress to React Migration',
+        badge: '100% Zero Data Loss',
+        basePriceINR: 24999,
+        basePriceUSD: 319,
+        baseDays: '5 - 7 Days',
+        desc: 'Complete database extraction, slug preservation, WebP images & 10x faster edge React architecture.'
     }
 ];
 

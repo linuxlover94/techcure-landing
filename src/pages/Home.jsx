@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Award } from 'lucide-react';
+import { ArrowRight, Zap, Award, ShieldCheck, Globe, Star, Sparkles } from 'lucide-react';
 import Hero from '../components/sections/Hero';
+import InteractiveSpeedSimulator from '../components/sections/InteractiveSpeedSimulator';
+import GlobalDelivery from '../components/sections/GlobalDelivery';
+import AgencyComparison from '../components/sections/AgencyComparison';
 import TechWeUse from '../components/sections/TechWeUse';
 import CoreCapabilities from '../components/sections/CoreCapabilities';
 import Process from '../components/sections/Process';
@@ -16,50 +19,132 @@ import Button from '../components/ui/Button';
 import SEOHead from '../components/ui/SEOHead';
 import { PRODUCTS, PORTFOLIO } from '../data/projectsData';
 
-const Home = () => {
-    // Show top 4 live flagship platforms on homepage
-    const featuredShowcase = [
-        PORTFOLIO.find(p => p.id === 'wicom'),
-        PORTFOLIO.find(p => p.id === 'goshuttles'),
-        PRODUCTS.find(p => p.id === 'inkleaf'),
-        PORTFOLIO.find(p => p.id === 'snpeetham-jyotish')
-    ].filter(Boolean);
+const SHOWCASE_ITEMS = [
+    PORTFOLIO.find(p => p.id === 'ubindianews'),
+    PORTFOLIO.find(p => p.id === 'advenjeans'),
+    PORTFOLIO.find(p => p.id === 'wicom'),
+    PORTFOLIO.find(p => p.id === 'ramarshpalace'),
+    PORTFOLIO.find(p => p.id === 'goshuttles'),
+    PRODUCTS.find(p => p.id === 'inkleaf')
+].filter(Boolean);
 
-    const faqSchema = {
+const FILTER_TABS = [
+    { id: 'all', label: 'All Flagship Systems' },
+    { id: 'migration', label: 'WordPress to React (Zero-Loss)' },
+    { id: 'commerce', label: 'High-Throughput Commerce' },
+    { id: 'saas', label: 'SaaS & Transit Apps' }
+];
+
+const Home = () => {
+    const [activeTab, setActiveTab] = useState('all');
+
+    const filteredShowcase = SHOWCASE_ITEMS.filter((item) => {
+        if (activeTab === 'all') return true;
+        if (activeTab === 'migration') {
+            return item.tags?.some(t => t.toLowerCase().includes('wordpress')) || item.category?.toLowerCase().includes('wordpress');
+        }
+        if (activeTab === 'commerce') {
+            return item.category?.toLowerCase().includes('commerce') || item.tags?.some(t => t.toLowerCase().includes('commerce'));
+        }
+        if (activeTab === 'saas') {
+            return item.category?.toLowerCase().includes('mobility') || item.category?.toLowerCase().includes('security') || item.tags?.some(t => t.toLowerCase().includes('saas'));
+        }
+        return true;
+    });
+
+    const combinedSchema = {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
             {
-                "@type": "Question",
-                "name": "How fast can Techcure launch my custom platform?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "For high-velocity business sites and MVP portals, we deploy in 72 hours. Custom full-stack web applications and SaaS platforms typically take 2-3 weeks."
-                }
+                "@type": "Organization",
+                "@id": "https://techcurehq.com/#organization",
+                "name": "Techcure",
+                "url": "https://techcurehq.com",
+                "logo": "https://techcurehq.com/logo.svg",
+                "email": "contact@techcurehq.com",
+                "telephone": "+91-8188838966",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Ranopali, Rampath",
+                    "addressLocality": "Ayodhya",
+                    "addressRegion": "Uttar Pradesh",
+                    "postalCode": "224123",
+                    "addressCountry": "IN"
+                },
+                "areaServed": [
+                    { "@type": "Country", "name": "United States" },
+                    { "@type": "Country", "name": "United Kingdom" },
+                    { "@type": "Country", "name": "United Arab Emirates" },
+                    { "@type": "Country", "name": "Germany" },
+                    { "@type": "Country", "name": "Canada" },
+                    { "@type": "Country", "name": "Australia" },
+                    { "@type": "Country", "name": "India" }
+                ],
+                "knowsAbout": [
+                    "React 19 Web Development",
+                    "Next.js 15 App Architecture",
+                    "WordPress to React Migration",
+                    "Zero-Data-Loss Database Migration",
+                    "Full-Stack SaaS MVP Engineering",
+                    "Headless E-Commerce Development",
+                    "Core Web Vitals Optimization"
+                ],
+                "sameAs": [
+                    "https://github.com/linuxlover94/techcure-landing"
+                ]
             },
             {
-                "@type": "Question",
-                "name": "Do I own 100% of the code and intellectual property?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "100% unconditionally. Upon delivery, the full Git repository, code, domain, database, and cloud infrastructure are transferred directly to you. Zero vendor lock-in."
-                }
+                "@type": "WebSite",
+                "@id": "https://techcurehq.com/#website",
+                "url": "https://techcurehq.com",
+                "name": "Techcure",
+                "publisher": { "@id": "https://techcurehq.com/#organization" }
             },
             {
-                "@type": "Question",
-                "name": "Does Techcure offer a Senior Citizen and Veteran discount?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. Techcure provides an unconditional flat 60% discount on all custom software engineering for entrepreneurs aged 60 and above, retired professionals, and military veterans."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What tech stack does Techcure engineer with?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We engineer primarily with React 19, Next.js, TypeScript, PostgreSQL, Redis, Tailwind CSS, and Cloudflare/AWS edge compute. We avoid slow WordPress and bloated CMS templates."
-                }
+                "@type": "FAQPage",
+                "@id": "https://techcurehq.com/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Can Techcure work with international founders in USA, UK, Europe, and Dubai?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Over 50% of our architectural sprints serve international founders across the US (EST/PST), UK (GMT), Europe (CET), and UAE (GST). We guarantee 4-6 hours of daily working overlap, counter-signed mutual NDAs, 100% IP assignment, and transparent invoicing via Stripe, Wise, and SWIFT bank wire."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does Techcure guarantee 100% zero data loss during WordPress migrations?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We execute automated cryptographic checksum ETL pipelines that extract and port every legacy article, custom post type, taxonomy, image, and WooCommerce SKU. We enforce strict 1-to-1 canonical URL matching to preserve 100% of your Google search rankings with zero 404 broken links."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How fast can Techcure launch my custom platform?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "For high-velocity business platforms and WordPress migrations, our rapid sprint pipeline deploys production-ready code in 72 hours to 7 days. Full-stack SaaS MVPs and custom software portals launch in 2 to 3 weeks."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I own 100% of the code and intellectual property?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "100% unconditionally. The complete Git commit history, cloud credentials, domain records, and intellectual property are irrevocably assigned directly to your organization on day one."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does Techcure offer a Senior Citizen and Veteran founder discount?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Techcure provides an unconditional flat 60% discount on all custom software engineering for entrepreneurs aged 60 and above, retired professionals, and military veterans worldwide."
+                        }
+                    }
+                ]
             }
         ]
     };
@@ -67,35 +152,40 @@ const Home = () => {
     return (
         <div className="space-y-0">
             <SEOHead
-                title="Custom Web & SaaS Software Engineering Studio"
-                description="Techcure engineers custom high-velocity web platforms, full-stack SaaS applications, and digital architectures that turn visitors into paying clients. 72h sprint launch, 100% code ownership."
+                title="Custom Software Studio | Next.js, React 19 & WP Migration Agency"
+                description="Techcure engineers custom high-velocity web platforms, full-stack SaaS apps, and zero-data-loss WordPress migrations for founders in USA, UK, Europe, UAE & India. 72h sprint launch, 100% code ownership."
                 canonicalPath="/"
-                schema={faqSchema}
+                schema={combinedSchema}
             />
+
+            {/* Hero Section */}
             <Hero />
+
+            {/* Interactive Speed & Telemetry Simulator (Immediate Visual Proof) */}
+            <InteractiveSpeedSimulator />
 
             {/* Featured Platforms & Flagship Showcase on Home */}
             <section className="py-24 bg-transparent relative overflow-hidden" id="showcase">
                 <div className="container mx-auto px-6 relative z-10">
                     <SectionHeading
                         title="PRODUCTION PROOF"
-                        subtitle="Live Systems Driving Real Revenue"
+                        subtitle="Live Systems Driving Real Commercial Revenue"
                     />
 
-                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
                         <div>
                             <h3 className="text-2xl md:text-3xl font-head font-bold">
                                 Battle-Tested Systems in <span className="text-primary">Active Production</span>
                             </h3>
                             <p className="text-muted-foreground text-sm max-w-xl mt-2 leading-relaxed">
-                                From telecom billing platforms handling 50,000+ users to intercity smart transit networks with 250,000+ booked rides.
+                                From telecom billing platforms handling 50,000+ users to national news publications and wholesale apparel manufacturers migrated from WordPress with zero data loss.
                             </p>
                         </div>
 
                         <div className="flex items-center gap-3">
                             <Link to="/portfolio">
                                 <Button variant="primary" size="sm" className="rounded-full gap-2 font-bold shadow-md">
-                                    <span>Browse Full Portfolio</span>
+                                    <span>Browse All 11 Projects</span>
                                     <ArrowRight size={14} />
                                 </Button>
                             </Link>
@@ -107,27 +197,46 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                        {featuredShowcase.map((item) => (
+                    {/* Interactive Filter Pills */}
+                    <div className="flex flex-wrap items-center gap-2 mb-10 p-1.5 rounded-2xl bg-secondary/70 border border-border max-w-3xl">
+                        {FILTER_TABS.map((tab) => (
+                            <button
+                                key={tab.id}
+                                onClick={() => setActiveTab(tab.id)}
+                                className={`px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all ${
+                                    activeTab === tab.id
+                                        ? 'bg-primary text-primary-foreground font-bold shadow-sm'
+                                        : 'text-muted-foreground hover:text-foreground hover:bg-background/40'
+                                }`}
+                            >
+                                {tab.label}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Showcase Cards Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                        {filteredShowcase.map((item) => (
                             <ProjectPreviewCard key={item.id} project={item} />
                         ))}
                     </div>
 
-                    <div className="p-8 rounded-2xl bg-gradient-to-r from-primary/10 via-secondary to-primary/5 border border-border flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+                    {/* Scroller Tour CTA Banner */}
+                    <div className="p-8 rounded-3xl bg-gradient-to-r from-primary/10 via-secondary to-primary/5 border border-border flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
                         <div className="flex items-center gap-4">
-                            <div className="p-4 rounded-xl bg-primary/20 text-primary">
+                            <div className="p-4 rounded-2xl bg-primary/20 text-primary">
                                 <Zap size={28} />
                             </div>
                             <div>
-                                <h4 className="text-xl font-bold font-head text-foreground">Explore interactive auto-scrolling previews &amp; architecture teardowns</h4>
-                                <p className="text-muted-foreground text-sm mt-0.5">Full desktop captures, latency benchmarks, and verified production metrics.</p>
+                                <h4 className="text-xl font-bold font-head text-foreground">Explore interactive desktop captures &amp; code teardowns</h4>
+                                <p className="text-muted-foreground text-sm mt-0.5">Automated viewport scrolling tours, latency telemetry, and architecture blueprints.</p>
                             </div>
                         </div>
 
                         <div className="flex gap-3 shrink-0">
                             <Link to="/portfolio">
-                                <Button size="default" className="rounded-full font-bold">
-                                    Explore Client Directory
+                                <Button size="default" className="rounded-full font-bold shadow-md">
+                                    Explore Full Portfolio (11 Systems)
                                 </Button>
                             </Link>
                         </div>
@@ -135,12 +244,25 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Global Client Delivery Section (USA, UK, Europe, UAE Clocks & Overlap) */}
+            <GlobalDelivery />
+
+            {/* Why Founders Fire Old Agencies Section */}
+            <AgencyComparison />
+
+            {/* Core Capabilities Grid */}
             <CoreCapabilities />
+
+            {/* Tech Stack Visualizer */}
             <TechWeUse />
+
+            {/* Rapid 4-Step Process */}
             <Process />
+
+            {/* Verified Client Testimonials */}
             <Testimonials />
 
-            {/* Senior & Veteran Founder Initiative Respectful Callout (Placed right before Pricing) */}
+            {/* Senior & Veteran Founder Initiative Respectful Callout */}
             <section className="container mx-auto px-6 py-8">
                 <div className="p-6 md:p-8 rounded-2xl bg-secondary/80 border border-amber-500/30 flex flex-col md:flex-row items-center justify-between gap-6 max-w-5xl mx-auto shadow-lg shadow-amber-500/5">
                     <div className="flex items-center gap-4">
@@ -157,7 +279,7 @@ const Home = () => {
                                 </span>
                             </div>
                             <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-                                An unconditional permanent commitment honoring entrepreneurs aged 60+ and military veterans launching digital ventures.
+                                An unconditional permanent commitment honoring entrepreneurs aged 60+ and military veterans launching digital ventures worldwide.
                             </p>
                         </div>
                     </div>
@@ -171,9 +293,16 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Interactive Scope & Cost Estimator */}
             <ProjectEstimator />
+
+            {/* Multi-Currency Transparent Pricing */}
             <Pricing />
+
+            {/* Frequently Asked Questions */}
             <FAQ />
+
+            {/* Direct Contact & Lead Pipeline */}
             <Contact />
         </div>
     );

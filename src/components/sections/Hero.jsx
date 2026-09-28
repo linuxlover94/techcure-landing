@@ -12,12 +12,23 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    {/* Eyebrow Trust Badge */}
-                    <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs sm:text-sm font-medium mb-8 backdrop-blur-sm shadow-sm">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="tracking-wide">FULL-STACK WEB &amp; SOFTWARE STUDIO</span>
-                        <span className="opacity-40">•</span>
-                        <span>72H SPRINT TO 3-WEEK LAUNCH</span>
+                    {/* International Client Delivery & Availability Pill Strip */}
+                    <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold shadow-sm">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                            <span>Sprint Slots Open • US, UK, EU &amp; UAE Sprints</span>
+                        </div>
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 border border-border text-xs font-mono text-muted-foreground shadow-sm">
+                            <span>🇺🇸 USA</span>
+                            <span>•</span>
+                            <span>🇬🇧 UK</span>
+                            <span>•</span>
+                            <span>🇪🇺 Europe</span>
+                            <span>•</span>
+                            <span>🇦🇪 Dubai</span>
+                            <span>•</span>
+                            <span>🇮🇳 India</span>
+                        </div>
                     </div>
 
                     {/* H1 Main Value Headline */}
@@ -71,20 +82,20 @@ const Hero = () => {
 
                         <div className="p-3 border-r-0 md:border-r border-border/80">
                             <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium mb-1">
-                                <Code size={14} className="text-cyan-400" />
-                                <span>Vedic Jyotish Core</span>
+                                <ShieldCheck size={14} className="text-indigo-400" />
+                                <span>WP to React</span>
                             </div>
-                            <div className="text-xl sm:text-2xl font-bold font-head text-foreground">&lt; 15ms</div>
-                            <div className="text-[11px] text-muted-foreground mt-0.5">Ephemeris Precision Engine</div>
+                            <div className="text-xl sm:text-2xl font-bold font-head text-foreground">100% Zero Loss</div>
+                            <div className="text-[11px] text-muted-foreground mt-0.5">Cryptographic Migration</div>
                         </div>
 
                         <div className="p-3">
                             <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium mb-1">
-                                <ShieldCheck size={14} className="text-emerald-500" />
-                                <span>Unconditional</span>
+                                <Code size={14} className="text-cyan-400" />
+                                <span>Unconditional IP</span>
                             </div>
-                            <div className="text-xl sm:text-2xl font-bold font-head text-foreground">100% IP</div>
-                            <div className="text-[11px] text-muted-foreground mt-0.5">Full Git Repo Transferred</div>
+                            <div className="text-xl sm:text-2xl font-bold font-head text-foreground">100% Git Repo</div>
+                            <div className="text-[11px] text-muted-foreground mt-0.5">Full Code Transferred Day 1</div>
                         </div>
                     </div>
                 </motion.div>

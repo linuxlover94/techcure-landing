@@ -31,6 +31,33 @@ const testimonials = [
         displayUrl: "snpeethamayodhya.org",
         metrics: "100,000+ Meals • Verified NGO (2005)",
         rating: 5
+    },
+    {
+        quote: "Migrating tens of thousands of articles from slow WordPress to React edge seemed terrifying. Techcure pulled off 100% zero data loss, TTFB plunged from 2.8s to 65ms, and our Google Discover traffic exploded with zero server crashes during state election breaking news.",
+        clientName: "UB India News Media Network",
+        platform: "National Hindi News Portal (WordPress Migrated)",
+        url: "https://ubindianews.com",
+        displayUrl: "ubindianews.com",
+        metrics: "100% Zero Data Loss • 65ms TTFB",
+        rating: 5
+    },
+    {
+        quote: "Our WooCommerce store was choking under 1,500+ denim cuts with 4.8s mobile load times. Techcure rebuilt the catalog on Astro/React with zero data loss. Mobile wholesale RFQ leads jumped by +62% in our very first month.",
+        clientName: "Adven Jeanswear (Shri Balaji Garments)",
+        platform: "Denim Manufacturer & B2B Wholesale",
+        url: "https://advenjeans.in",
+        displayUrl: "advenjeans.in",
+        metrics: "+62% Wholesale Leads • 0.4s FCP",
+        rating: 5
+    },
+    {
+        quote: "We were paying 20% commission on every room to online booking giants because our old WordPress site was too slow. Techcure built a direct Next.js 15 WhatsApp booking flow that converts pilgrims in 45 seconds. Direct bookings surged +78%.",
+        clientName: "Hotel Ramarsh Palace (Ayodhya)",
+        platform: "Luxury Boutique Hotel on Rampath",
+        url: "https://ramarshpalace.com",
+        displayUrl: "ramarshpalace.com",
+        metrics: "+78% Direct Bookings • 0% OTA Fee",
+        rating: 5
     }
 ];
 
