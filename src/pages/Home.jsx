@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Award, ShieldCheck, Globe, Star, Sparkles } from 'lucide-react';
 import Hero from '../components/sections/Hero';
-import InteractiveSpeedSimulator from '../components/sections/InteractiveSpeedSimulator';
 import GlobalDelivery from '../components/sections/GlobalDelivery';
 import AgencyComparison from '../components/sections/AgencyComparison';
 import TechWeUse from '../components/sections/TechWeUse';
@@ -41,13 +40,27 @@ const Home = () => {
     const filteredShowcase = SHOWCASE_ITEMS.filter((item) => {
         if (activeTab === 'all') return true;
         if (activeTab === 'migration') {
-            return item.tags?.some(t => t.toLowerCase().includes('wordpress')) || item.category?.toLowerCase().includes('wordpress');
+            return (
+                item.tags?.some(t => t.toLowerCase().includes('wordpress') || t.toLowerCase().includes('migration')) ||
+                item.category?.toLowerCase().includes('wordpress') ||
+                item.category?.toLowerCase().includes('migration') ||
+                item.title?.toLowerCase().includes('migration')
+            );
         }
         if (activeTab === 'commerce') {
-            return item.category?.toLowerCase().includes('commerce') || item.tags?.some(t => t.toLowerCase().includes('commerce'));
+            return (
+                item.category?.toLowerCase().includes('commerce') ||
+                item.category?.toLowerCase().includes('hospitality') ||
+                item.tags?.some(t => t.toLowerCase().includes('commerce') || t.toLowerCase().includes('wholesale') || t.toLowerCase().includes('apparel') || t.toLowerCase().includes('booking'))
+            );
         }
         if (activeTab === 'saas') {
-            return item.category?.toLowerCase().includes('mobility') || item.category?.toLowerCase().includes('security') || item.tags?.some(t => t.toLowerCase().includes('saas'));
+            return (
+                item.category?.toLowerCase().includes('mobility') ||
+                item.category?.toLowerCase().includes('security') ||
+                item.category?.toLowerCase().includes('telecom') ||
+                item.tags?.some(t => t.toLowerCase().includes('saas') || t.toLowerCase().includes('transit') || t.toLowerCase().includes('telecom') || t.toLowerCase().includes('notes'))
+            );
         }
         return true;
     });
@@ -161,9 +174,6 @@ const Home = () => {
             {/* Hero Section */}
             <Hero />
 
-            {/* Interactive Speed & Telemetry Simulator (Immediate Visual Proof) */}
-            <InteractiveSpeedSimulator />
-
             {/* Featured Platforms & Flagship Showcase on Home */}
             <section className="py-24 bg-transparent relative overflow-hidden" id="showcase">
                 <div className="container mx-auto px-6 relative z-10">
@@ -214,8 +224,8 @@ const Home = () => {
                         ))}
                     </div>
 
-                    {/* Showcase Cards Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    {/* Showcase Cards Grid (Spacious 2-column layout so preview cards breathe) */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                         {filteredShowcase.map((item) => (
                             <ProjectPreviewCard key={item.id} project={item} />
                         ))}

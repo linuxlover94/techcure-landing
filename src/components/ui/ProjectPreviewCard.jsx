@@ -538,24 +538,26 @@ const ProjectPreviewCard = ({ project, layout = "grid" }) => {
                         )}
                     </div>
 
-                    {/* Tech Stack & Action Footer */}
-                    <div className="pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    {/* Tech Stack & Action Footer (Clean Stacked Layout) */}
+                    <div className="pt-4 border-t border-border space-y-3">
+                        {/* Tech tags row */}
                         <div className="flex flex-wrap gap-1.5">
-                            {project.techStack?.map((tech, i) => (
-                                <span key={i} className="text-[11px] font-mono px-2.5 py-0.5 rounded bg-secondary text-muted-foreground border border-border/80">
+                            {project.techStack?.slice(0, 5).map((tech, i) => (
+                                <span key={i} className="text-[11px] font-mono px-2 py-0.5 rounded bg-secondary text-muted-foreground border border-border/80">
                                     {tech}
                                 </span>
                             ))}
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+                        {/* Action Buttons Row: 2-column full-width grid */}
+                        <div className="grid grid-cols-2 gap-2 pt-1">
                             <Link
                                 to={`/case-study/${project.id}`}
-                                className="inline-flex shrink-0"
+                                className="w-full"
                             >
-                                <Button variant="outline" size="sm" className="rounded-xl gap-1.5 text-xs hover:border-primary/60 hover:text-primary">
-                                    <FileText size={13} className="text-primary" />
-                                    <span>View Case Study</span>
+                                <Button variant="outline" size="sm" className="w-full rounded-xl gap-1.5 text-xs h-9 hover:border-primary/60 hover:text-primary justify-center font-medium">
+                                    <FileText size={13} className="text-primary shrink-0" />
+                                    <span className="truncate">View Case Study</span>
                                 </Button>
                             </Link>
 
@@ -564,11 +566,11 @@ const ProjectPreviewCard = ({ project, layout = "grid" }) => {
                                     href={project.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex shrink-0"
+                                    className="w-full"
                                 >
-                                    <Button size="sm" className="rounded-xl gap-1.5 text-xs shadow-md">
-                                        <span>Visit Live Platform</span>
-                                        <ExternalLink size={13} />
+                                    <Button size="sm" className="w-full rounded-xl gap-1.5 text-xs h-9 shadow-md justify-center font-bold">
+                                        <span className="truncate">Visit Live</span>
+                                        <ExternalLink size={13} className="shrink-0" />
                                     </Button>
                                 </a>
                             ) : (
@@ -576,11 +578,11 @@ const ProjectPreviewCard = ({ project, layout = "grid" }) => {
                                     href={`https://wa.me/918188838966?text=${encodeURIComponent(`Hi Techcure Team, I would like to request Private Beta Access for ${project.title} (${project.displayUrl}).`)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex shrink-0"
+                                    className="w-full"
                                 >
-                                    <Button variant="secondary" size="sm" className="rounded-xl gap-1.5 text-xs border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10">
-                                        <ShieldAlert size={13} />
-                                        <span>Request Beta (WhatsApp)</span>
+                                    <Button variant="secondary" size="sm" className="w-full rounded-xl gap-1.5 text-xs h-9 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 justify-center">
+                                        <ShieldAlert size={13} className="shrink-0" />
+                                        <span className="truncate">Request Beta</span>
                                     </Button>
                                 </a>
                             )}

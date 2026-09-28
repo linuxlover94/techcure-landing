@@ -5,6 +5,7 @@ import { ThemeProvider } from './components/ui/ThemeProvider';
 import ScrollToTop from './components/ui/ScrollToTop';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import StickyContactBar from './components/layout/StickyContactBar';
 
 // Pages
 import Home from './pages/Home';
@@ -58,6 +59,7 @@ function App() {
           </main>
 
           <Footer />
+          <StickyContactBar />
         </div>
       </Router>
     </ThemeProvider>
