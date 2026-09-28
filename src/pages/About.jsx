@@ -343,8 +343,8 @@ const About = () => {
                             <MapPin size={28} />
                         </div>
                         <div>
-                            <h4 className="text-lg font-bold font-head text-foreground">Physical Engineering Hubs &amp; Global Delivery</h4>
-                            <p className="text-xs text-muted-foreground mt-0.5">Lucknow Hub • Ayodhya Center • Bengaluru Network</p>
+                            <h4 className="text-lg font-bold font-head text-foreground">Engineering Headquarters &amp; Pan-India Delivery</h4>
+                            <p className="text-xs text-muted-foreground mt-0.5">Headquartered in Ayodhya • Serving Ambitious Clients Across India</p>
                         </div>
                     </div>
                     <Link to="/contact">

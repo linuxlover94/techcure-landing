@@ -43,7 +43,7 @@ const ServicePage = () => {
                     "url": "https://techcurehq.com",
                     "telephone": "+91-8188838966"
                 },
-                "areaServed": ["Lucknow", "Ayodhya", "Bengaluru", "India", "Worldwide"],
+                "areaServed": ["Ayodhya", "All India", "Worldwide"],
                 "offers": {
                     "@type": "Offer",
                     "price": service.startingPrice.replace(/[^0-9]/g, '') || "19999",

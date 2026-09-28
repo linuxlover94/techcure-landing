@@ -62,7 +62,7 @@ const DISCOUNT_TIERS = [
         features: [
             "Bespoke Full-Stack SaaS / Platform Architecture",
             "Military-Grade AES-256-GCM Data Security & Zero-Knowledge Vaults",
-            "Direct Access to Lead Systems Architect (Lucknow/Ayodhya)",
+            "Direct Access to Lead Systems Architect (Ayodhya HQ / Pan-India)",
             "High-Throughput Database Design & Resilient REST/GraphQL APIs",
             "Complete Technical Handover & Architectural Blueprint Docs",
             "6 Months of Priority Direct SLAs & Scaling Assurance"

@@ -31,16 +31,16 @@ const LocalLucknow = () => {
                 "paymentAccepted": "UPI, Bank Transfer, Card, Wire",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "Hazratganj / Gomti Nagar Hub",
-                    "addressLocality": "Lucknow",
+                    "streetAddress": "Civil Lines / Ramkot Hub",
+                    "addressLocality": "Ayodhya",
                     "addressRegion": "Uttar Pradesh",
-                    "postalCode": "226010",
+                    "postalCode": "224123",
                     "addressCountry": "IN"
                 },
                 "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 26.8467,
-                    "longitude": 80.9462
+                    "latitude": 26.7922,
+                    "longitude": 82.1998
                 },
                 "openingHoursSpecification": [
                     {
@@ -50,7 +50,7 @@ const LocalLucknow = () => {
                         "closes": "20:00"
                     }
                 ],
-                "description": "Techcure is Lucknow's premier web development company and software engineering studio. We build custom Next.js web applications, e-commerce platforms, and SaaS systems with sub-second speed.",
+                "description": "Techcure builds custom Next.js web applications, e-commerce platforms, and SaaS systems for Lucknow businesses, engineered from our Ayodhya headquarters.",
                 "areaServed": [
                     { "@type": "City", "name": "Lucknow" },
                     { "@type": "City", "name": "Ayodhya" },
@@ -65,23 +65,23 @@ const LocalLucknow = () => {
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "Which is the best web development company in Lucknow?",
+                        "name": "Which is the best web development company for Lucknow businesses?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Techcure is widely recognized as Lucknow's leading high-velocity web development company, engineering custom Next.js, React 19, and full-stack software architectures with sub-second speeds and 100% client code ownership."
+                            "text": "Techcure is recognized as a leading high-velocity web development company for Lucknow businesses, engineering custom Next.js, React 19, and full-stack software architectures with sub-second speeds and 100% client code ownership."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Can we meet your web development team in Lucknow in person?",
+                        "name": "How does Techcure collaborate with clients in Lucknow?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. We maintain active hubs across Lucknow and Ayodhya. Founders and business owners can schedule in-person technical scoping sessions in Gomti Nagar or Hazratganj."
+                            "text": "Headquartered in Ayodhya, Techcure delivers dedicated digital engineering for Lucknow founders via high-touch virtual architectural scoping, shared Git repositories, real-time Slack/WhatsApp channels, and milestone reviews."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "How much does a custom website cost in Lucknow?",
+                        "name": "How much does a custom website cost for a Lucknow company?",
                         "acceptedAnswer": {
                             "@type": "Answer",
                             "text": "Techcure offers transparent, fixed-price pricing: Startup Velocity packages begin at ₹19,999 (72h turnaround), Growth Architecture platforms at ₹49,999, and custom SaaS platforms from ₹1,49,999. Entrepreneurs aged 60+ and military veterans receive an unconditional flat 60% discount."
@@ -139,9 +139,9 @@ const LocalLucknow = () => {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono mb-6 uppercase tracking-wider font-semibold">
                         <MapPin size={14} className="text-primary" />
-                        <span>Lucknow Hub • Uttar Pradesh</span>
+                        <span>Ayodhya HQ • Serving Lucknow &amp; Pan-India</span>
                         <span className="opacity-40">•</span>
-                        <span>Direct In-Person &amp; Virtual Scoping</span>
+                        <span>Virtual &amp; Dedicated Engineering Scoping</span>
                     </div>
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-head font-bold tracking-tight text-foreground mb-6 leading-tight">
@@ -183,7 +183,7 @@ const LocalLucknow = () => {
             {/* Why Lucknow Businesses Choose Techcure */}
             <section className="container mx-auto px-6 mb-24 max-w-5xl">
                 <SectionHeading
-                    title="LUCKNOW ENGINEERING HUB"
+                    title="LUCKNOW CLIENT DELIVERY"
                     subtitle="Why Local Businesses Trust Techcure"
                 />
 

@@ -181,9 +181,9 @@ const LocalAyodhya = () => {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono mb-6 uppercase tracking-wider font-semibold">
                         <MapPin size={14} className="text-primary" />
-                        <span>Ayodhya Center • Uttar Pradesh</span>
+                        <span>Engineering Headquarters • Ayodhya, Uttar Pradesh</span>
                         <span className="opacity-40">•</span>
-                        <span>In-Person Scoping Across Ayodhya Dham &amp; Civil Lines</span>
+                        <span>Serving Clients Across All India 🇮🇳</span>
                     </div>
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-head font-bold tracking-tight text-foreground mb-6 leading-tight">

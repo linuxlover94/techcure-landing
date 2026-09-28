@@ -31,7 +31,7 @@ const ContactPage = () => {
         <div className="pt-28 pb-20">
             <SEOHead
                 title="Start Your Project | Direct Engineering Contact"
-                description="Connect directly with Techcure senior software engineers in Lucknow, Ayodhya, and Bangalore for custom SaaS development, cloud systems, and high-velocity web platforms."
+                description="Connect directly with Techcure senior software engineers headquartered in Ayodhya, serving ambitious founders and businesses across India."
                 canonicalPath="/contact"
                 schema={contactSchema}
             />
@@ -56,7 +56,7 @@ const ContactPage = () => {
                         </h1>
 
                         <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                            Have an ambitious project in mind? Connect directly with our engineering team in Lucknow, Ayodhya, and Bangalore.
+                            Have an ambitious project in mind? Connect directly with our engineering team headquartered in Ayodhya, serving clients across all India.
                         </p>
                     </motion.div>
                 </div>

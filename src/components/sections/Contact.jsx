@@ -90,7 +90,7 @@ const Contact = () => {
                             Let's engineer your software.
                         </h3>
                         <p className="text-muted-foreground mb-8 text-base leading-relaxed">
-                            No junior sales reps, no bureaucratic delays. You collaborate directly with senior software architects in Lucknow, Ayodhya, and Bengaluru to scope, build, and deploy production-grade web systems.
+                            No junior sales reps, no bureaucratic delays. You collaborate directly with senior software architects headquartered in Ayodhya to scope, build, and deploy production-grade web systems for clients across India.
                         </p>
 
                         <div className="space-y-4">
@@ -147,8 +147,8 @@ const Contact = () => {
                                     <MapPin size={22} />
                                 </div>
                                 <div>
-                                    <p className="text-xs font-mono text-muted-foreground uppercase font-medium">Physical Engineering Hubs</p>
-                                    <p className="font-semibold text-foreground text-sm">Lucknow • Ayodhya • Bengaluru</p>
+                                    <p className="text-xs font-mono text-muted-foreground uppercase font-medium">Engineering Headquarters</p>
+                                    <p className="font-semibold text-foreground text-sm">Ayodhya, Uttar Pradesh • Serving Pan-India</p>
                                 </div>
                             </div>
                         </div>

@@ -26,7 +26,7 @@ const faqs = [
     },
     {
         question: "Can we meet your engineering team in person?",
-        answer: "Yes. We maintain physical hubs across Lucknow, Ayodhya, and Bengaluru for founders who prefer in-person architectural discovery sessions, while running seamless asynchronous delivery globally."
+        answer: "Yes. Our physical engineering headquarters is in Ayodhya, Uttar Pradesh, where clients can meet our leadership in person. For founders and businesses across India (Lucknow, Bengaluru, Delhi NCR, Mumbai, and beyond), we conduct seamless virtual architectural discovery sessions and real-time collaboration."
     }
 ];
 

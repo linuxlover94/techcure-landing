@@ -16,9 +16,8 @@ const Footer = () => {
                             Engineering custom web applications, high-performance SaaS platforms, and digital architectures that drive measurable business revenue.
                         </p>
                         <div className="mt-4 flex flex-wrap gap-2 text-xs font-mono text-muted-foreground">
-                            <Link to="/web-development-company-lucknow" className="px-2.5 py-1 rounded-md bg-secondary border border-border hover:border-primary/50 hover:text-primary transition-colors">Lucknow Hub ↗</Link>
-                            <Link to="/web-development-company-ayodhya" className="px-2.5 py-1 rounded-md bg-secondary border border-border hover:border-primary/50 hover:text-primary transition-colors">Ayodhya Center ↗</Link>
-                            <span className="px-2.5 py-1 rounded-md bg-secondary border border-border">Bengaluru Network</span>
+                            <Link to="/web-development-company-ayodhya" className="px-2.5 py-1 rounded-md bg-secondary border border-border hover:border-primary/50 hover:text-primary transition-colors">Engineering HQ: Ayodhya ↗</Link>
+                            <span className="px-2.5 py-1 rounded-md bg-secondary border border-border">Serving Clients Pan-India 🇮🇳</span>
                         </div>
                         <div className="mt-6 flex flex-wrap items-center gap-3">
                             <a
@@ -48,8 +47,8 @@ const Footer = () => {
                             <li><Link to="/services/saas-development" className="hover:text-primary transition-colors">SaaS &amp; MVP Build</Link></li>
                             <li><Link to="/services/ecommerce-development" className="hover:text-primary transition-colors">Headless E-Commerce</Link></li>
                             <li><Link to="/services/speed-optimization" className="hover:text-primary transition-colors">Speed Optimization</Link></li>
-                            <li><Link to="/web-development-company-lucknow" className="hover:text-primary transition-colors text-primary/90 font-medium">Web Dev Lucknow 📍</Link></li>
-                            <li><Link to="/web-development-company-ayodhya" className="hover:text-primary transition-colors text-primary/90 font-medium">Web &amp; App Ayodhya 📍</Link></li>
+                            <li><Link to="/web-development-company-ayodhya" className="hover:text-primary transition-colors text-primary/90 font-medium">Web &amp; App Dev (Ayodhya HQ) 📍</Link></li>
+                            <li><Link to="/web-development-company-lucknow" className="hover:text-primary transition-colors text-muted-foreground">Web Dev Services (Lucknow) ↗</Link></li>
                             <li><Link to="/senior-grant" className="hover:text-amber-400 transition-colors text-amber-500 font-medium">Senior &amp; Veteran (-60%) 🎖️</Link></li>
                         </ul>
                     </div>
@@ -84,7 +83,7 @@ const Footer = () => {
                 <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
                     <p>© {new Date().getFullYear()} Techcure Technology. 100% Client IP Ownership Standard.</p>
                     <div className="flex items-center gap-2">
-                        <span>Engineered with excellence in Lucknow, Ayodhya &amp; Bengaluru</span>
+                        <span>Engineered with excellence in Ayodhya • Serving ambitious clients across India</span>
                     </div>
                 </div>
             </div>

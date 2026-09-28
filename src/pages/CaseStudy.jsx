@@ -607,7 +607,7 @@ const CaseStudy = () => {
                     </div>
                     <h2 className="text-3xl md:text-4xl font-head font-bold mb-4">Need an engine custom-built for your business?</h2>
                     <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-                        Connect with our senior software architects in Lucknow, Ayodhya, or over WhatsApp. We build software that outperforms on speed, conversion, and durability.
+                        Connect with our senior software architects headquartered in Ayodhya, or over WhatsApp. We build software that outperforms on speed, conversion, and durability for clients nationwide.
                     </p>
                     <a
                         href={`https://wa.me/918188838966?text=${encodeURIComponent(`Hi Techcure, I would like to schedule a roadmap consultation for our new digital platform.`)}`}
