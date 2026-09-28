@@ -23,9 +23,10 @@ const Hero = () => {
                     {/* H1 Main Value Headline */}
                     <h1 className="text-4xl sm:text-6xl md:text-7xl font-head font-bold mb-6 leading-[1.08] tracking-tight text-foreground">
                         Custom Websites &amp; Software Built to{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-emerald-400">
-                            Win Real Clients.
+                        <span className="text-gradient-animated">
+                            Win Real Clients
                         </span>
+                        <span className="text-primary">.</span>
                     </h1>
 
                     {/* Customer-Centric Subheadline */}

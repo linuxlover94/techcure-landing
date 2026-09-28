@@ -188,9 +188,10 @@ const LocalAyodhya = () => {
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-head font-bold tracking-tight text-foreground mb-6 leading-tight">
                         Web &amp; Mobile App Development Company in{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-amber-400 to-emerald-400">
-                            Ayodhya.
+                        <span className="text-gradient-animated">
+                            Ayodhya
                         </span>
+                        <span className="text-primary">.</span>
                     </h1>
 
                     <p className="text-base sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">

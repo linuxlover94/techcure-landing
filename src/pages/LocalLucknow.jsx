@@ -146,9 +146,10 @@ const LocalLucknow = () => {
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-head font-bold tracking-tight text-foreground mb-6 leading-tight">
                         Web Development Company in{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-emerald-400">
-                            Lucknow.
+                        <span className="text-gradient-animated">
+                            Lucknow
                         </span>
+                        <span className="text-primary">.</span>
                     </h1>
 
                     <p className="text-base sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
