@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../ui/Button';
@@ -7,11 +7,11 @@ import { ThemeToggle } from '../ui/ThemeToggle';
 
 const NAV_ITEMS = [
     { label: 'Home', path: '/' },
-    { label: 'Products', path: '/products' },
+    { label: 'Services', path: '/services/web-development' },
     { label: 'Portfolio', path: '/portfolio' },
-    { label: 'Free Apps', path: '/free-apps' },
-    { label: 'Blog', path: '/blog' },
+    { label: 'Products', path: '/products' },
     { label: 'Why Us', path: '/why-us' },
+    { label: 'Blog', path: '/blog' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' }
 ];
@@ -19,6 +19,7 @@ const NAV_ITEMS = [
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -47,30 +48,38 @@ const Navbar = () => {
         open: (i) => ({ y: 0, opacity: 1, transition: { delay: i * 0.08, duration: 0.3 } })
     };
 
+    const isItemActive = (item, isActive) => {
+        if (item.label === 'Services' && location.pathname.startsWith('/services')) {
+            return true;
+        }
+        return isActive;
+    };
+
     return (
         <>
-            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-md border-b border-border py-3' : 'py-4 bg-transparent'}`}>
+            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/90 backdrop-blur-md border-b border-border py-3' : 'py-4 bg-transparent'}`}>
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     {/* Left: Brand Logo */}
                     <div className="flex items-center">
-                        <Link to="/" className="text-2xl font-head font-bold tracking-tighter flex items-center gap-1">
+                        <Link to="/" className="text-2xl font-head font-bold tracking-tighter flex items-center gap-1 text-foreground">
                             TECHCURE<span className="w-2 h-2 rounded-full bg-primary"></span>
                         </Link>
                     </div>
 
                     {/* Center: Centered Navigation Links Pill */}
-                    <div className="hidden lg:flex items-center justify-center gap-1.5 p-1.5 rounded-full bg-secondary/60 border border-border/80 backdrop-blur-md shadow-sm">
+                    <div className="hidden lg:flex items-center justify-center gap-1 p-1 rounded-full bg-secondary/80 border border-border/80 backdrop-blur-md shadow-sm">
                         {NAV_ITEMS.map((item) => (
                             <NavLink
                                 key={item.path}
                                 to={item.path}
-                                className={({ isActive }) =>
-                                    `px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium transition-all duration-200 ${
-                                        isActive 
+                                className={({ isActive }) => {
+                                    const active = isItemActive(item, isActive);
+                                    return `px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium transition-all duration-200 ${
+                                        active 
                                             ? 'bg-primary text-primary-foreground font-semibold shadow-sm' 
-                                            : 'text-muted-foreground hover:text-foreground hover:bg-background/40'
-                                    }`
-                                }
+                                            : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
+                                    }`;
+                                }}
                             >
                                 {item.label}
                             </NavLink>
@@ -81,7 +90,9 @@ const Navbar = () => {
                     <div className="hidden lg:flex items-center gap-3">
                         <ThemeToggle />
                         <Link to="/contact">
-                            <Button variant="primary" size="sm" className="rounded-full px-5">Get Started</Button>
+                            <Button variant="primary" size="sm" className="rounded-full px-5 font-bold shadow-sm">
+                                Start Project
+                            </Button>
                         </Link>
                     </div>
 
@@ -92,9 +103,9 @@ const Navbar = () => {
                             onClick={() => setIsOpen(true)}
                             aria-label="Open navigation menu"
                             aria-expanded={isOpen}
-                            className="text-foreground p-1.5 rounded-lg border border-border bg-secondary/50"
+                            className="text-foreground p-2 rounded-xl border border-border bg-secondary/60"
                         >
-                            <Menu size={22} />
+                            <Menu size={20} />
                         </button>
                     </div>
                 </div>
@@ -108,7 +119,7 @@ const Navbar = () => {
                         animate="open"
                         exit="closed"
                         variants={menuVariants}
-                        className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-xl flex flex-col justify-center items-center"
+                        className="fixed inset-0 z-[60] bg-background/98 backdrop-blur-2xl flex flex-col justify-center items-center"
                     >
                         <button
                             onClick={() => setIsOpen(false)}
@@ -128,11 +139,12 @@ const Navbar = () => {
                                     <NavLink
                                         to={item.path}
                                         onClick={() => setIsOpen(false)}
-                                        className={({ isActive }) =>
-                                            `text-3xl md:text-4xl font-head font-bold transition-colors ${
-                                                isActive ? 'text-primary font-bold' : 'text-foreground hover:text-primary'
-                                            }`
-                                        }
+                                        className={({ isActive }) => {
+                                            const active = isItemActive(item, isActive);
+                                            return `text-2xl sm:text-3xl font-head font-bold transition-colors ${
+                                                active ? 'text-primary font-bold' : 'text-foreground hover:text-primary'
+                                            }`;
+                                        }}
                                     >
                                         {item.label}
                                     </NavLink>
@@ -145,7 +157,7 @@ const Navbar = () => {
                                 className="pt-4"
                             >
                                 <Link to="/contact" onClick={() => setIsOpen(false)}>
-                                    <Button size="lg" className="rounded-full px-8">
+                                    <Button size="lg" className="rounded-full px-8 shadow-xl font-bold">
                                         Start Your Project
                                     </Button>
                                 </Link>

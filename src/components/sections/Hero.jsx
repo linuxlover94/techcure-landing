@@ -1,64 +1,90 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
-import ScrambleText from '../ui/ScrambleText';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Zap, Users, Code } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            <div className="container mx-auto px-6 relative z-10 text-center">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-28 pb-16">
+            <div className="container mx-auto px-6 relative z-10 text-center max-w-5xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
                 >
-                    <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs sm:text-sm font-mono mb-6 backdrop-blur-sm">
-                        <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                        <span>GLOBAL ASYNCHRONOUS DELIVERY</span>
+                    {/* Eyebrow Trust Badge */}
+                    <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs sm:text-sm font-medium mb-8 backdrop-blur-sm shadow-sm">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                        <span className="tracking-wide">FULL-STACK WEB &amp; SOFTWARE STUDIO</span>
                         <span className="opacity-40">•</span>
-                        <span>100% CLIENT IP OWNERSHIP</span>
+                        <span>72H SPRINT TO 3-WEEK LAUNCH</span>
                     </div>
 
-                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-head font-bold mb-6 leading-tight tracking-tight">
-                        DIGITAL <br />
-                        <ScrambleText text="DOMINANCE" className="text-primary" />
+                    {/* H1 Main Value Headline */}
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-head font-bold mb-6 leading-[1.08] tracking-tight text-foreground">
+                        Custom Websites &amp; Software Built to{' '}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-emerald-400">
+                            Win Real Clients.
+                        </span>
                     </h1>
 
-                    <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-                        We engineer custom, <span className="text-primary font-medium">high-velocity</span> web architectures and full-stack platforms with sub-second global latency. Zero agency bloat. 100% clean code transferred directly to you.
+                    {/* Customer-Centric Subheadline */}
+                    <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+                        We engineer bespoke Next.js web applications, high-converting platforms, and scalable SaaS systems that load in sub-seconds. Zero agency bloat, zero lock-in, and 100% full source code ownership transferred directly to you.
                     </p>
 
-                    {/* Senior & Veteran Founder Honorarium Callout */}
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl bg-secondary/80 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-mono mb-8 backdrop-blur-md max-w-2xl mx-auto shadow-lg shadow-amber-500/5 hover:border-amber-500/50 transition-all group">
-                        <div className="flex items-center gap-2.5 text-left">
-                            <span className="text-xl shrink-0 p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">🎖️</span>
-                            <div>
-                                <strong className="text-amber-300 font-bold">Senior (60+) &amp; Veteran Founder Discount (Flat 60% Off):</strong>
-                                <p className="text-[11px] sm:text-xs text-amber-200/80 font-sans mt-0.5">Dedicated engineering initiative honoring entrepreneurs aged 60+ and military veterans.</p>
-                            </div>
-                        </div>
-                        <a
-                            href="/senior-grant"
-                            className="shrink-0 px-3.5 py-1.5 rounded-xl bg-amber-400 text-zinc-950 font-bold text-xs hover:bg-amber-300 transition-all flex items-center gap-1 group-hover:translate-x-0.5 shadow-sm"
-                        >
-                            <span>Explore Initiative</span>
-                            <ArrowRight size={12} />
+                    {/* Action CTAs */}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                        <a href="#contact">
+                            <Button size="lg" className="rounded-full px-8 text-base sm:text-lg h-13 sm:h-14 shadow-xl shadow-primary/20 gap-2 font-bold">
+                                <span>Start Your Project</span>
+                                <ArrowRight className="h-5 w-5" />
+                            </Button>
+                        </a>
+                        <a href="#showcase">
+                            <Button variant="outline" size="lg" className="rounded-full px-8 text-base sm:text-lg h-13 sm:h-14 border-border bg-card/60 hover:bg-card">
+                                View Live Production Proof
+                            </Button>
                         </a>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="#contact">
-                            <Button size="lg" className="rounded-full px-8 text-base sm:text-lg h-13 sm:h-14 magnet-target shadow-lg shadow-primary/20">
-                                Start Your Project <ArrowRight className="ml-2 h-5 w-5" />
-                            </Button>
-                        </a>
-                        <a href="/products">
-                            <Button variant="outline" size="lg" className="rounded-full px-8 text-base sm:text-lg h-13 sm:h-14 magnet-target bg-background/50 backdrop-blur-sm">
-                                View Live Systems
-                            </Button>
-                        </a>
+                    {/* Real Measurable Trust Telemetry Bar */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-2xl bg-card/60 border border-border backdrop-blur-md shadow-sm max-w-4xl mx-auto text-left">
+                        <div className="p-3 border-r-0 md:border-r border-border/80">
+                            <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium mb-1">
+                                <Users size={14} className="text-primary" />
+                                <span>GoShuttles Transit</span>
+                            </div>
+                            <div className="text-xl sm:text-2xl font-bold font-head text-foreground">250,000+</div>
+                            <div className="text-[11px] text-muted-foreground mt-0.5">Rides Booked &amp; Dispatched</div>
+                        </div>
+
+                        <div className="p-3 border-r-0 md:border-r border-border/80">
+                            <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium mb-1">
+                                <Zap size={14} className="text-emerald-500" />
+                                <span>WiCom Telecom</span>
+                            </div>
+                            <div className="text-xl sm:text-2xl font-bold font-head text-foreground">0.4s FCP</div>
+                            <div className="text-[11px] text-muted-foreground mt-0.5">+44% Payment Conversion</div>
+                        </div>
+
+                        <div className="p-3 border-r-0 md:border-r border-border/80">
+                            <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium mb-1">
+                                <Code size={14} className="text-cyan-400" />
+                                <span>Vedic Jyotish Core</span>
+                            </div>
+                            <div className="text-xl sm:text-2xl font-bold font-head text-foreground">&lt; 15ms</div>
+                            <div className="text-[11px] text-muted-foreground mt-0.5">Ephemeris Precision Engine</div>
+                        </div>
+
+                        <div className="p-3">
+                            <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium mb-1">
+                                <ShieldCheck size={14} className="text-emerald-500" />
+                                <span>Unconditional</span>
+                            </div>
+                            <div className="text-xl sm:text-2xl font-bold font-head text-foreground">100% IP</div>
+                            <div className="text-[11px] text-muted-foreground mt-0.5">Full Git Repo Transferred</div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

@@ -1,79 +1,96 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, ListChecks, Lightbulb, Palette, Gauge, ShieldCheck, RefreshCw, Clock } from 'lucide-react';
+import { Globe, Layers, ShoppingBag, Smartphone, Database, Shield, Zap, KeyRound } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import Card from '../ui/Card';
 
 const capabilities = [
     {
-        icon: <Code2 className="h-10 w-10 text-primary" />,
-        title: "Expert Coding",
-        description: "Clean, efficient, and maintainable code tailored to project needs."
+        icon: <Globe className="h-8 w-8 text-primary" />,
+        title: "High-Velocity Next.js Websites",
+        description: "Sub-second marketing platforms and corporate websites engineered for maximum search engine authority, technical SEO, and lead conversion.",
+        badge: "72h Rapid Launch"
     },
     {
-        icon: <ListChecks className="h-10 w-10 text-primary" />,
-        title: "Proven Methods",
-        description: "Leveraging agile practices for iterative success and adaptability."
+        icon: <Layers className="h-8 w-8 text-primary" />,
+        title: "Custom SaaS & MVP Development",
+        description: "Full-stack software products built with React 19, Node.js, and PostgreSQL. Multi-tenant architecture, user dashboards, and role-based permissions.",
+        badge: "2-3 Weeks"
     },
     {
-        icon: <Lightbulb className="h-10 w-10 text-primary" />,
-        title: "Strategic Insight",
-        description: "Solutions perfectly aligned with your business goals and vision."
+        icon: <ShoppingBag className="h-8 w-8 text-primary" />,
+        title: "High-Throughput Commerce & Portals",
+        description: "Headless e-commerce and billing portals with 1-click UPI and card checkout workflows, dynamic pricing engines, and zero cart drop-offs.",
+        badge: "Stripe & UPI"
     },
     {
-        icon: <Palette className="h-10 w-10 text-primary" />,
-        title: "Creative Design",
-        description: "Intuitive and engaging UI/UX crafted for your brand identity."
+        icon: <Smartphone className="h-8 w-8 text-primary" />,
+        title: "Cross-Platform Mobile Apps",
+        description: "Fast, responsive web and mobile solutions with offline-first caching, real-time WebSockets, and native iOS & Android compatibility.",
+        badge: "iOS & Android"
     },
     {
-        icon: <Gauge className="h-10 w-10 text-primary" />,
-        title: "Performance Focus",
-        description: "Optimized solutions for superior speed, reliability and scalability."
+        icon: <Database className="h-8 w-8 text-primary" />,
+        title: "Database & Cloud Architecture",
+        description: "Scalable PostgreSQL schemas, Redis caching, Supabase real-time pipelines, and serverless edge functions built to handle millions of queries.",
+        badge: "Sub-50ms DB"
     },
     {
-        icon: <ShieldCheck className="h-10 w-10 text-primary" />,
-        title: "Quality Assurance",
-        description: "Rigorous testing ensuring bug-free and flawless deployments."
+        icon: <Zap className="h-8 w-8 text-primary" />,
+        title: "Core Web Vitals & Speed Overhaul",
+        description: "Upgrading bloated 5-second legacy sites to sub-500ms edge architectures. Guaranteed 95-100 Lighthouse performance metrics.",
+        badge: "Lighthouse 100"
     },
     {
-        icon: <RefreshCw className="h-10 w-10 text-primary" />,
-        title: "Adaptive Process",
-        description: "Flexibility through agile methodology to meet evolving needs."
+        icon: <Shield className="h-8 w-8 text-primary" />,
+        title: "Zero-Knowledge Security & Defense",
+        description: "Client-side AES-256-GCM encryption, Argon2id key derivation, and strict Content Security Policies that protect proprietary enterprise assets.",
+        badge: "AES-256 Vault"
     },
     {
-        icon: <Clock className="h-10 w-10 text-primary" />,
-        title: "Timely Delivery",
-        description: "A strong commitment to project deadlines and your launch schedule."
+        icon: <KeyRound className="h-8 w-8 text-primary" />,
+        title: "100% Unconditional IP Ownership",
+        description: "Complete Git commit history, domain records, database credentials, and cloud accounts transferred directly to you. Zero vendor hostage traps.",
+        badge: "Zero Lock-In"
     }
 ];
 
 const CoreCapabilities = () => {
     return (
-        <section className="py-24 bg-transparent relative overflow-hidden perspective-1000">
+        <section className="py-24 bg-transparent relative overflow-hidden" id="services">
             <div className="container mx-auto px-6 relative z-10">
-                <SectionHeading title="CORE CAPABILITIES" subtitle="Why Choose Us" />
+                <SectionHeading title="WHAT WE DELIVER" subtitle="Core Engineering Services" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {capabilities.map((cap, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: -100, rotateX: 45 }}
-                            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{
-                                type: "spring",
-                                stiffness: 100,
-                                damping: 15,
-                                delay: index * 0.1
+                                duration: 0.4,
+                                delay: index * 0.05
                             }}
-                            viewport={{ once: false, margin: "-30px" }}
+                            viewport={{ once: true }}
                             className="h-full"
                         >
-                            <Card className="h-full flex flex-col items-center text-center p-8 hover:border-primary/50 transition-colors duration-300 group bg-card/60 backdrop-blur-md border-border">
-                                <div className="mb-6 p-4 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary/20">
-                                    {cap.icon}
+                            <Card className="h-full flex flex-col justify-between p-6 hover:border-primary/50 transition-all duration-300 group bg-card border-border shadow-sm">
+                                <div>
+                                    <div className="flex items-center justify-between mb-5">
+                                        <div className="p-3 bg-primary/10 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                                            {cap.icon}
+                                        </div>
+                                        <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-secondary border border-border text-muted-foreground">
+                                            {cap.badge}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-lg font-bold font-head mb-2 text-foreground group-hover:text-primary transition-colors">
+                                        {cap.title}
+                                    </h3>
+                                    <p className="text-muted-foreground text-xs leading-relaxed">
+                                        {cap.description}
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">{cap.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed">{cap.description}</p>
                             </Card>
                         </motion.div>
                     ))}

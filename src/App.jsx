@@ -2,11 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { ThemeProvider } from './components/ui/ThemeProvider';
-import CustomCursor from './components/ui/CustomCursor';
 import ScrollToTop from './components/ui/ScrollToTop';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import MatrixBackground from './components/ui/MatrixBackground';
 
 // Pages
 import Home from './pages/Home';
@@ -21,21 +19,22 @@ import BlogListing from './pages/BlogListing';
 import BlogPost from './pages/BlogPost';
 import SeniorGrant from './pages/SeniorGrant';
 import Admin from './pages/Admin';
+import ServicePage from './pages/ServicePage';
 
 function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <Router>
         <ScrollToTop />
-        <div className="min-h-screen text-foreground font-body selection:bg-primary selection:text-primary-foreground relative">
-          <MatrixBackground />
-          <CustomCursor />
+        <div className="min-h-screen text-foreground font-body selection:bg-primary selection:text-primary-foreground relative bg-background">
 
           <Navbar />
 
           <main className="relative z-10">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/services" element={<ServicePage />} />
+              <Route path="/services/:slug" element={<ServicePage />} />
               <Route path="/products" element={<Products />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/free-apps" element={<FreeApps />} />
