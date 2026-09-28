@@ -16,7 +16,7 @@ const Footer = () => {
                             Engineering custom web applications, high-performance SaaS platforms, and digital architectures that drive measurable business revenue.
                         </p>
                         <div className="mt-4 flex flex-wrap gap-2 text-xs font-mono text-muted-foreground">
-                            <span className="px-2.5 py-1 rounded-md bg-secondary border border-border">Lucknow Hub</span>
+                            <Link to="/web-development-company-lucknow" className="px-2.5 py-1 rounded-md bg-secondary border border-border hover:border-primary/50 hover:text-primary transition-colors">Lucknow Hub ↗</Link>
                             <span className="px-2.5 py-1 rounded-md bg-secondary border border-border">Ayodhya Center</span>
                             <span className="px-2.5 py-1 rounded-md bg-secondary border border-border">Bengaluru Network</span>
                         </div>
@@ -48,6 +48,7 @@ const Footer = () => {
                             <li><Link to="/services/saas-development" className="hover:text-primary transition-colors">SaaS &amp; MVP Build</Link></li>
                             <li><Link to="/services/ecommerce-development" className="hover:text-primary transition-colors">Headless E-Commerce</Link></li>
                             <li><Link to="/services/speed-optimization" className="hover:text-primary transition-colors">Speed Optimization</Link></li>
+                            <li><Link to="/web-development-company-lucknow" className="hover:text-primary transition-colors text-primary/90 font-medium">Web Dev Lucknow 📍</Link></li>
                             <li><Link to="/senior-grant" className="hover:text-amber-400 transition-colors text-amber-500 font-medium">Senior &amp; Veteran (-60%) 🎖️</Link></li>
                         </ul>
                     </div>

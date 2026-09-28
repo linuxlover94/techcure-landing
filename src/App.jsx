@@ -20,6 +20,7 @@ import BlogPost from './pages/BlogPost';
 import SeniorGrant from './pages/SeniorGrant';
 import Admin from './pages/Admin';
 import ServicePage from './pages/ServicePage';
+import LocalLucknow from './pages/LocalLucknow';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<ServicePage />} />
               <Route path="/services/:slug" element={<ServicePage />} />
+              <Route path="/web-development-company-lucknow" element={<LocalLucknow />} />
               <Route path="/products" element={<Products />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/free-apps" element={<FreeApps />} />

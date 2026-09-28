@@ -9,6 +9,7 @@ import Testimonials from '../components/sections/Testimonials';
 import Pricing from '../components/sections/Pricing';
 import FAQ from '../components/sections/FAQ';
 import Contact from '../components/sections/Contact';
+import ProjectEstimator from '../components/sections/ProjectEstimator';
 import SectionHeading from '../components/ui/SectionHeading';
 import ProjectPreviewCard from '../components/ui/ProjectPreviewCard';
 import Button from '../components/ui/Button';
@@ -170,6 +171,7 @@ const Home = () => {
                 </div>
             </section>
 
+            <ProjectEstimator />
             <Pricing />
             <FAQ />
             <Contact />
