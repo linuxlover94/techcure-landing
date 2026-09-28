@@ -21,6 +21,7 @@ import SeniorGrant from './pages/SeniorGrant';
 import Admin from './pages/Admin';
 import ServicePage from './pages/ServicePage';
 import LocalLucknow from './pages/LocalLucknow';
+import LocalAyodhya from './pages/LocalAyodhya';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
               <Route path="/services" element={<ServicePage />} />
               <Route path="/services/:slug" element={<ServicePage />} />
               <Route path="/web-development-company-lucknow" element={<LocalLucknow />} />
+              <Route path="/web-development-company-ayodhya" element={<LocalAyodhya />} />
+              <Route path="/app-development-company-ayodhya" element={<LocalAyodhya />} />
+              <Route path="/software-development-company-ayodhya" element={<LocalAyodhya />} />
               <Route path="/products" element={<Products />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/free-apps" element={<FreeApps />} />

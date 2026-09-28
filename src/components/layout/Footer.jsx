@@ -17,7 +17,7 @@ const Footer = () => {
                         </p>
                         <div className="mt-4 flex flex-wrap gap-2 text-xs font-mono text-muted-foreground">
                             <Link to="/web-development-company-lucknow" className="px-2.5 py-1 rounded-md bg-secondary border border-border hover:border-primary/50 hover:text-primary transition-colors">Lucknow Hub ↗</Link>
-                            <span className="px-2.5 py-1 rounded-md bg-secondary border border-border">Ayodhya Center</span>
+                            <Link to="/web-development-company-ayodhya" className="px-2.5 py-1 rounded-md bg-secondary border border-border hover:border-primary/50 hover:text-primary transition-colors">Ayodhya Center ↗</Link>
                             <span className="px-2.5 py-1 rounded-md bg-secondary border border-border">Bengaluru Network</span>
                         </div>
                         <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -49,6 +49,7 @@ const Footer = () => {
                             <li><Link to="/services/ecommerce-development" className="hover:text-primary transition-colors">Headless E-Commerce</Link></li>
                             <li><Link to="/services/speed-optimization" className="hover:text-primary transition-colors">Speed Optimization</Link></li>
                             <li><Link to="/web-development-company-lucknow" className="hover:text-primary transition-colors text-primary/90 font-medium">Web Dev Lucknow 📍</Link></li>
+                            <li><Link to="/web-development-company-ayodhya" className="hover:text-primary transition-colors text-primary/90 font-medium">Web &amp; App Ayodhya 📍</Link></li>
                             <li><Link to="/senior-grant" className="hover:text-amber-400 transition-colors text-amber-500 font-medium">Senior &amp; Veteran (-60%) 🎖️</Link></li>
                         </ul>
                     </div>
